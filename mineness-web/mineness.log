@@ -1,0 +1,10 @@
+[DEBUG] AmazonHTMLShipmentConfirmationEmailServiceImpl.enrichWithProductInfoFromAmazonAPI():127 - Retrieving information for ASIN: B000U69B0Y
+[DEBUG] AmazonHTMLShipmentConfirmationEmailServiceImpl.enrichWithProductInfoFromAmazonAPI():127 - Retrieving information for ASIN: B000U69B0Y
+[ERROR] AmazonHTMLOrderConfirmationEmailServiceImpl.processIncomingEmail():62 - Order with identifier already exists in db: 002-8092475-6889803
+[ERROR] AmazonHTMLOrderConfirmationEmailServiceImpl.processIncomingEmail():63 - Confirmation email should have been removed
+[INFO ] AmazonEmailOrderConfirmationParserServiceUnitTest.testParserSuccess():116 - Testing AmazonHTMLOrderConfirmationEmailServiceImpl SUCCESS ...
+[INFO ] AmazonEmailOrderConfirmationParserServiceUnitTest.testParserSuccess():123 - Testing AmazonHTMLOrderConfirmationEmailServiceImpl COMPLETE
+[INFO ] AmazonEmailOrderConfirmationParserServiceUnitTest.testParserFailure():128 - Testing AmazonHTMLOrderConfirmationEmailServiceImpl FAILURE ...
+[ERROR] AmazonHTMLOrderConfirmationEmailServiceImpl.processIncomingEmail():62 - Order with identifier already exists in db: 002-8092475-6889803
+[ERROR] AmazonHTMLOrderConfirmationEmailServiceImpl.processIncomingEmail():63 - Confirmation email should have been removed
+[INFO ] AmazonEmailOrderConfirmationParserServiceUnitTest.testParserFailure():137 - Testing AmazonHTMLOrderConfirmationEmailServiceImpl COMPLETE

@@ -1,0 +1,16 @@
+{"list":[
+    {
+        "id":"5184b08b8de2e44d163529f3",
+        "rrlnms":["administrator", "developer"],
+        "psswrd":"passwd",
+        "ml":"admin@mineness.com",
+        "srnm":"admin"
+    },
+    {
+        "id":"5184b08b8de2e44d163529f5",
+        "rrlnms":["user"],
+        "psswrd":"passwd",
+        "ml":"bjorn@mineness.com",
+        "srnm":"bjorn"
+    }
+]}

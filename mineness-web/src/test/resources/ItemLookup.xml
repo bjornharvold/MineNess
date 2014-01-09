@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01">
+    <OperationRequest>
+        <HTTPHeaders>
+            <Header Name="UserAgent" Value="Java/1.7.0_04"/>
+        </HTTPHeaders>
+        <RequestId>d4877946-9baf-438d-a575-220ae9f470d4</RequestId>
+        <Arguments>
+            <Argument Name="Operation" Value="ItemLookup"/>
+            <Argument Name="Service" Value="AWSECommerceService"/>
+            <Argument Name="AssociateTag" Value="mine04-20"/>
+            <Argument Name="Version" Value="2009-03-31"/>
+            <Argument Name="Signature" Value="MU9Wrccyrq9UGDi1gYEWuq2Ns0LPgAlEhEI08aH8HQg="/>
+            <Argument Name="ItemId" Value="B000U69B0Y"/>
+            <Argument Name="AWSAccessKeyId" Value="AKIAJ52UFH43YDG536EA"/>
+            <Argument Name="Timestamp" Value="2013-04-30T09:33:38Z"/>
+            <Argument Name="ResponseGroup" Value="ItemAttributes,Images"/>
+        </Arguments>
+        <RequestProcessingTime>0.1159280000000000</RequestProcessingTime>
+    </OperationRequest>
+    <Items>
+        <Request>
+            <IsValid>True</IsValid>
+            <ItemLookupRequest>
+                <IdType>ASIN</IdType>
+                <ItemId>B000U69B0Y</ItemId>
+                <ResponseGroup>ItemAttributes</ResponseGroup>
+                <ResponseGroup>Images</ResponseGroup>
+                <VariationPage>All</VariationPage>
+            </ItemLookupRequest>
+        </Request>
+        <Item>
+            <ASIN>B000U69B0Y</ASIN>
+            <DetailPageURL>http://www.amazon.com/Orka-12-Inch-Stainless-Silicone-Tongs/dp/B000U69B0Y%3FSubscriptionId%3DAKIAJ52UFH43YDG536EA%26tag%3Dmine04-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB000U69B0Y</DetailPageURL>
+            <ItemLinks>
+                <ItemLink>
+                    <Description>Technical Details</Description>
+                    <URL>http://www.amazon.com/Orka-12-Inch-Stainless-Silicone-Tongs/dp/tech-data/B000U69B0Y%3FSubscriptionId%3DAKIAJ52UFH43YDG536EA%26tag%3Dmine04-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000U69B0Y</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Baby Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB000U69B0Y%26SubscriptionId%3DAKIAJ52UFH43YDG536EA%26tag%3Dmine04-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000U69B0Y</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wedding Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB000U69B0Y%26SubscriptionId%3DAKIAJ52UFH43YDG536EA%26tag%3Dmine04-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000U69B0Y</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wishlist</Description>
+                    <URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB000U69B0Y%26SubscriptionId%3DAKIAJ52UFH43YDG536EA%26tag%3Dmine04-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000U69B0Y</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Tell A Friend</Description>
+                    <URL>http://www.amazon.com/gp/pdp/taf/B000U69B0Y%3FSubscriptionId%3DAKIAJ52UFH43YDG536EA%26tag%3Dmine04-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000U69B0Y</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Customer Reviews</Description>
+                    <URL>http://www.amazon.com/review/product/B000U69B0Y%3FSubscriptionId%3DAKIAJ52UFH43YDG536EA%26tag%3Dmine04-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000U69B0Y</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Offers</Description>
+                    <URL>http://www.amazon.com/gp/offer-listing/B000U69B0Y%3FSubscriptionId%3DAKIAJ52UFH43YDG536EA%26tag%3Dmine04-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000U69B0Y</URL>
+                </ItemLink>
+            </ItemLinks>
+            <SmallImage>
+                <URL>http://ecx.images-amazon.com/images/I/31lTFy0mFEL._SL75_.jpg</URL>
+                <Height Units="pixels">75</Height>
+                <Width Units="pixels">25</Width>
+            </SmallImage>
+            <MediumImage>
+                <URL>http://ecx.images-amazon.com/images/I/31lTFy0mFEL._SL160_.jpg</URL>
+                <Height Units="pixels">160</Height>
+                <Width Units="pixels">53</Width>
+            </MediumImage>
+            <LargeImage>
+                <URL>http://ecx.images-amazon.com/images/I/31lTFy0mFEL.jpg</URL>
+                <Height Units="pixels">500</Height>
+                <Width Units="pixels">165</Width>
+            </LargeImage>
+            <ImageSets>
+                <ImageSet Category="primary">
+                    <SwatchImage>
+                        <URL>http://ecx.images-amazon.com/images/I/31lTFy0mFEL._SL30_.jpg</URL>
+                        <Height Units="pixels">30</Height>
+                        <Width Units="pixels">10</Width>
+                    </SwatchImage>
+                    <SmallImage>
+                        <URL>http://ecx.images-amazon.com/images/I/31lTFy0mFEL._SL75_.jpg</URL>
+                        <Height Units="pixels">75</Height>
+                        <Width Units="pixels">25</Width>
+                    </SmallImage>
+                    <ThumbnailImage>
+                        <URL>http://ecx.images-amazon.com/images/I/31lTFy0mFEL._SL75_.jpg</URL>
+                        <Height Units="pixels">75</Height>
+                        <Width Units="pixels">25</Width>
+                    </ThumbnailImage>
+                    <TinyImage>
+                        <URL>http://ecx.images-amazon.com/images/I/31lTFy0mFEL._SL110_.jpg</URL>
+                        <Height Units="pixels">110</Height>
+                        <Width Units="pixels">36</Width>
+                    </TinyImage>
+                    <MediumImage>
+                        <URL>http://ecx.images-amazon.com/images/I/31lTFy0mFEL._SL160_.jpg</URL>
+                        <Height Units="pixels">160</Height>
+                        <Width Units="pixels">53</Width>
+                    </MediumImage>
+                    <LargeImage>
+                        <URL>http://ecx.images-amazon.com/images/I/31lTFy0mFEL.jpg</URL>
+                        <Height Units="pixels">500</Height>
+                        <Width Units="pixels">165</Width>
+                    </LargeImage>
+                </ImageSet>
+            </ImageSets>
+            <ItemAttributes>
+                <Binding>Kitchen</Binding>
+                <Brand>ORKA</Brand>
+                <CatalogNumberList>
+                    <CatalogNumberListElement>A16800</CatalogNumberListElement>
+                </CatalogNumberList>
+                <Color>Black</Color>
+                <EAN>0885902168009</EAN>
+                <EANList>
+                    <EANListElement>0885902168009</EANListElement>
+                </EANList>
+                <Feature>Multi-purpose tongs are great for delicately and safely turning food</Feature>
+                <Feature>Silicone ends won't scratch pans</Feature>
+                <Feature>Silicone grips provide safety and comfort</Feature>
+                <ItemDimensions>
+                    <Height Units="hundredths-inches">1200</Height>
+                    <Length Units="hundredths-inches">150</Length>
+                    <Width Units="hundredths-inches">125</Width>
+                </ItemDimensions>
+                <Label>ORKA</Label>
+                <Manufacturer>ORKA</Manufacturer>
+                <Model>A16800</Model>
+                <MPN>A16800</MPN>
+                <PackageDimensions>
+                    <Height Units="hundredths-inches">50</Height>
+                    <Length Units="hundredths-inches">1100</Length>
+                    <Weight Units="hundredths-pounds">35</Weight>
+                    <Width Units="hundredths-inches">390</Width>
+                </PackageDimensions>
+                <PartNumber>A16800</PartNumber>
+                <ProductGroup>Kitchen</ProductGroup>
+                <ProductTypeName>KITCHEN</ProductTypeName>
+                <Publisher>ORKA</Publisher>
+                <SKU>40206000499</SKU>
+                <Studio>ORKA</Studio>
+                <Title>Orka 12-Inch Stainless and Silicone Tongs</Title>
+                <UPC>885902168009</UPC>
+                <UPCList>
+                    <UPCListElement>885902168009</UPCListElement>
+                </UPCList>
+                <Warranty>5 years</Warranty>
+            </ItemAttributes>
+        </Item>
+    </Items>
+</ItemLookupResponse>

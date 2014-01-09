@@ -1,0 +1,673 @@
+Delivered-To: bjorn@harvold.com
+Received: by 10.216.108.133 with SMTP id q5csp116728weg;
+        Tue, 14 May 2013 06:34:29 -0700 (PDT)
+X-Received: by 10.42.90.72 with SMTP id j8mr17007290icm.34.1368538468930;
+        Tue, 14 May 2013 06:34:28 -0700 (PDT)
+Return-Path: <chiafenchung@yahoo.com>
+Received: from nm4-vm0.bullet.mail.ne1.yahoo.com (nm4-vm0.bullet.mail.ne1.yahoo.com. [98.138.90.253])
+        by mx.google.com with ESMTPS id q5si17604183igl.59.2013.05.14.06.34.28
+        for <bjorn@harvold.com>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Tue, 14 May 2013 06:34:28 -0700 (PDT)
+Received-SPF: pass (google.com: best guess record for domain of chiafenchung@yahoo.com designates 98.138.90.253 as permitted sender) client-ip=98.138.90.253;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: best guess record for domain of chiafenchung@yahoo.com designates 98.138.90.253 as permitted sender) smtp.mail=chiafenchung@yahoo.com;
+       dkim=pass header.i=@yahoo.com
+Received: from [98.138.90.57] by nm4.bullet.mail.ne1.yahoo.com with NNFMP; 14 May 2013 13:34:27 -0000
+Received: from [98.138.89.160] by tm10.bullet.mail.ne1.yahoo.com with NNFMP; 14 May 2013 13:34:27 -0000
+Received: from [127.0.0.1] by omp1016.mail.ne1.yahoo.com with NNFMP; 14 May 2013 13:34:27 -0000
+X-Yahoo-Newman-Property: ymail-3
+X-Yahoo-Newman-Id: 595936.73763.bm@omp1016.mail.ne1.yahoo.com
+Received: (qmail 82046 invoked by uid 60001); 14 May 2013 13:34:27 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s1024; t=1368538467; bh=OIWkalKriUqUJB9/PNskahK0aB+Gif63FaahsOXF7Dw=; h=X-YMail-OSG:Received:X-Rocket-MIMEInfo:X-Mailer:References:Message-ID:Date:From:Reply-To:Subject:To:In-Reply-To:MIME-Version:Content-Type; b=XAUUXBeD4UDoZtDch82r3jUH0uVzCoJ6KEpJjNLnhF5MDNUMlpoyEptT+AtyGqnPmHZ9JqK4GtBMlvOqfXxqoaBzKCyMNHIY1SctoTqWHsGQo/LBDQ6RAyX/uklDI06fQJ1P/2Q3zdSR1egM10v+uJUXGUX4XsKKOLYs9gXh1ic=
+DomainKey-Signature:a=rsa-sha1; q=dns; c=nofws;
+  s=s1024; d=yahoo.com;
+  h=X-YMail-OSG:Received:X-Rocket-MIMEInfo:X-Mailer:References:Message-ID:Date:From:Reply-To:Subject:To:In-Reply-To:MIME-Version:Content-Type;
+  b=PgICImTGkA/1k5ihRHGEE61tlG4GwmArYstKrBBcMu+PFaVJ/exiQj0ouxYmy74IBXnzCjQpDSni+cy1mKWtwuwcKJ5aUnU1fnsDPRllJjw4ozITMDg+sXla7dGdsJ99tqzmZgEuBm+iAmzJApA3+jm51t6cbFe0PFGHXOnTROA=;
+X-YMail-OSG: zXszkDcVM1nmSv5JPOnclKaJK8LZE4m0pvTV6YQlHqMkeHK
+ RhTzjs_nnntwu3jQGbEyJ80PKHWR6fOLuQ80HixL8xJaTyVTc.uefAhOZ7L.
+ MpBvf572OpGLyIg4j3AmHH5.71CvPXA8qPR2gMVTw.UrdkNir6HjdLx7I.SQ
+ rFWyPsvfrfWtbiRqDCKjGN5dRQfI7MLq7nWDXhcMVmq7UvrkllRWLUJrjMQs
+ DbTSeZmbSCL1w9XWn00AynUdBFaf7yozrqZUI1jV0QQXzDq5MLlUxiwHP9t.
+ FbaNMs8sIky2F3WcuDpOZZS2EjNBCkdxwh581Am42K_TCNv8.sMmqq36OlzQ
+ ir0pfVilPaM3X_QU5OGyPSWtsngRcii2bQXAp5QYiCPZPfzhTTSotk9USghf
+ sxyyOCD_1L0M9DWlmRvOpx3YN4bqQHKvtyxsZsbwq3HHq.8_3ChgG9jFdXz1
+ WUlcQv8QvLpXvDUEd27is6nV5krytjVRov6gi8uinhcYeTPyL14wjLvPLJAJ
+ ztf3iSCeTI7Zg2PbCyk_3dd5wgHHTm.DYvUQqMCmk5bnyVaMg.jQvW4Fwn0r
+ nB1KOm26tDqOFUKYCrsUHJpLe9.D8kVjWmk.j6yfXMGJEcg--
+Received: from [207.237.255.82] by web124903.mail.ne1.yahoo.com via HTTP; Tue, 14 May 2013 06:34:27 PDT
+X-Rocket-MIMEInfo: 002.001,CgoKLS0tLS0gRm9yd2FyZGVkIE1lc3NhZ2UgLS0tLS0KRnJvbTogRXRzeSBUcmFuc2FjdGlvbnMgPHRyYW5zYWN0aW9uQGV0c3kuY29tPgpUbzogY2hpYWZlbmNodW5nQHlhaG9vLmNvbSAKU2VudDogU3VuZGF5LCBTZXB0ZW1iZXIgMzAsIDIwMTIgMTA6MjUgUE0KU3ViamVjdDogWW91ciBFdHN5IFB1cmNoYXNlIGZyb20gSnVzdEpheW5lcyAoNjQ3MDExMzQpCiAKCgogCiAgICAgICAgICAgICAgIAogICAgICAKICAKIEhpIGZhbm55Y2h1bmcsIApDb25ncmF0dWxhdGlvbnMgb24geW91ciBFdHN5IG9yZGVyIGYBMAEBAQE-
+X-Mailer: YahooMailWebService/0.8.141.536
+References: <201210010225.q912PIE7009963@worker13.ny4.etsy.com>
+Message-ID: <1368538467.64810.YahooMailNeo@web124903.mail.ne1.yahoo.com>
+Date: Tue, 14 May 2013 06:34:27 -0700 (PDT)
+From: Fanny Chung <chiafenchung@yahoo.com>
+Reply-To: Fanny Chung <chiafenchung@yahoo.com>
+Subject: Fw: Your Etsy Purchase from JustJaynes (64701134)
+To: "bjorn@harvold.com" <bjorn@harvold.com>
+In-Reply-To: <201210010225.q912PIE7009963@worker13.ny4.etsy.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="-904242613-305248214-1368538467=:64810"
+
+
+---904242613-305248214-1368538467=:64810
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=iso-8859-1
+
+=0A=0A=0A----- Forwarded Message -----=0AFrom: Etsy Transactions <transacti=
+on@etsy.com>=0ATo: chiafenchung@yahoo.com =0ASent: Sunday, September 30, 20=
+12 10:25 PM=0ASubject: Your Etsy Purchase from JustJaynes (64701134)=0A =0A=
+=0A=0A =0A               =0A      =0A  =0A Hi fannychung, =0ACongratulation=
+s on your Etsy order from JustJaynes. =0AYour order number is: 64701134.   =
+=0AOrder details   =0APayment method  =0APayPal =0AYou paid cjmeinke@hotmai=
+l.com =0AView your receipt    =0A Shipping Address  =0AChiafen Chung=0A247 =
+W 87 St. Apt 17F=0ANew York, NY 10024=0AUnited States   =0A   Sterling silv=
+er custom initial charm necklace - personalized necklace   =0AShop: JustJay=
+nes =0ATransaction ID: 96529313 =0AQuantity: 1 =0APrice:  $26.50 USD   =0AO=
+rder total   =0A Item total:  $26.50 usd  =0AShipping:  $3.50 usd  =0ASales=
+ tax:  $0.00 usd    =0AOrder total:  $30.00 usd     =0AYour note to the sho=
+p  =0AI'd like to have a letter S with 18" chain. thanks.  =0ANote from Cat=
+hy  =0AThank you for your order! New items are listed often. Join my weekly=
+ mailing list for valuable information and to see new items. Visit my websi=
+te http://justjaynes.com/ to sign up. INTERNATIONAL BUYERS: If you would li=
+ke to upgrade your shipping to Priority Mail, it is $14.50 extra and can sh=
+ip within the normal 1-4 day production schedule. With Priority Mail, you c=
+an expect to receive your order 6-10 days after it ships. This is much fast=
+er than 3-4 weeks by regular mail.  =0AQuestions =0AIf you have any questio=
+ns about this order, please contact the seller directly  =0A   Cathy   =0AS=
+hop: JustJaynes =0ASend Cathy a convo  =A0=A0|=A0=A0 Send Cathy an email   =
+  =0AIf you were not involved in this transaction, please forward this emai=
+l to trust@etsy.com  and we will investigate right away. =0AThanks,=0AEtsy=
+=0A              =0A  =0A =A9 2012 Etsy, Inc., 55 Washington Street, Suite =
+512, Brooklyn, NY, 11201, USA, Earth       
+---904242613-305248214-1368538467=:64810
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=iso-8859-1
+
+<html><body><div style=3D"color:#000; background-color:#fff; font-family:ti=
+mes new roman, new york, times, serif;font-size:12pt"><div><span></span></d=
+iv><div><br></div>  <div style=3D"font-family: 'times new roman', 'new york=
+', times, serif; font-size: 12pt;"> <div style=3D"font-family: 'times new r=
+oman', 'new york', times, serif; font-size: 12pt;"> <div dir=3D"ltr"> -----=
+ Forwarded Message -----<br>  <font size=3D"2" face=3D"Arial"> <b><span sty=
+le=3D"font-weight:bold;">From:</span></b> Etsy Transactions &lt;transaction=
+@etsy.com&gt;<br> <b><span style=3D"font-weight: bold;">To:</span></b> chia=
+fenchung@yahoo.com <br> <b><span style=3D"font-weight: bold;">Sent:</span><=
+/b> Sunday, September 30, 2012 10:25 PM<br> <b><span style=3D"font-weight: =
+bold;">Subject:</span></b> Your Etsy Purchase from JustJaynes (64701134)<br=
+> </font> </div> <div class=3D"y_msg_container"><br><div id=3D"yiv123552573=
+4"><style>=0A _filtered #yiv1235525734 {=0A=0A}=0A=0A=0A#yiv1235525734 tabl=
+e .filtered99999 , =0A#yiv1235525734 table .filtered99999 , =0A#yiv12355257=
+34 table .filtered99999 , =0A#yiv1235525734 div .filtered99999 , =0A#yiv123=
+5525734 div .filtered99999 =0A    {width:100% !important;}=0A=0A#yiv1235525=
+734 div .filtered99999 =0A    {clear:right;}=0A=0A#yiv1235525734 div .filte=
+red99999 =0A    {border-left:0px;}=0A=0A#yiv1235525734 div .filtered99999 =
+=0A    {padding-top:20px !important;}=0A=0A#yiv1235525734 td .filtered99999=
+ , =0A#yiv1235525734 td .filtered99999  img=0A    {width:0px !important;}=
+=0A=0A#yiv1235525734 div .filtered99999 =0A    {display:none;}=0A=0A#yiv123=
+5525734 div .filtered99999 =0A    {font-size:16px !important;line-height:20=
+px !important;}=0A=0A#yiv1235525734 img .filtered99999 =0A    {width:0 !imp=
+ortant;}=0A=0A#yiv1235525734 img .filtered99999 =0A    {width:90px !importa=
+nt;}=0A=0A#yiv1235525734 img .filtered99999 =0A    {max-width:100% !importa=
+nt;}=0A=0A#yiv1235525734 td .filtered99999 , =0A#yiv1235525734 td .filtered=
+99999  img, =0A#yiv1235525734 td .filtered99999 , =0A#yiv1235525734 td .fil=
+tered99999  img, =0A#yiv1235525734 div .filtered99999  td .filtered99999 , =
+=0A#yiv1235525734 div .filtered99999  td .filtered99999  img, =0A#yiv123552=
+5734 td .filtered99999 , =0A#yiv1235525734 td .filtered99999  img =0A    {w=
+idth:10px !important;}=0A=0A=0A#yiv1235525734 tr .filtered99999 , =0A#yiv12=
+35525734 tr .filtered99999  td, =0A#yiv1235525734 tr .filtered99999  img, =
+=0A#yiv1235525734 tr .filtered99999 , =0A#yiv1235525734 tr .filtered99999  =
+td, =0A#yiv1235525734 tr .filtered99999  img=0A    {height:5px;}=0A=0A=0A#y=
+iv1235525734 div .filtered99999  td .filtered99999 , =0A#yiv1235525734 div =
+.filtered99999  td .filtered99999  img, =0A#yiv1235525734 div .filtered9999=
+9  td .filtered99999 , =0A#yiv1235525734 div .filtered99999  td .filtered99=
+999  img=0A    {width:180px !important;}=0A=0A=0A#yiv1235525734 div .filter=
+ed99999  table .filtered99999 , =0A#yiv1235525734 div .filtered99999  table=
+ .filtered99999 =0A    {width:200px !important;}=0A=0A=0A#yiv1235525734 td =
+.filtered99999 , =0A#yiv1235525734 td .filtered99999  img=0A    {height:0px=
+;}=0A=0A=0A#yiv1235525734 div .filtered99999 , =0A#yiv1235525734 div .filte=
+red99999  img=0A    {width:0px;height:10px;float:none;}=0A=0A=0A#yiv1235525=
+734 div .filtered99999  td .filtered99999 , =0A#yiv1235525734 div .filtered=
+99999  td .filtered99999  img=0A    {width:50px !important;}=0A=0A=0A#yiv12=
+35525734 td .filtered99999 , =0A#yiv1235525734 td .filtered99999  img, =0A#=
+yiv1235525734 td .filtered99999 , =0A#yiv1235525734 td .filtered99999  img,=
+ =0A#yiv1235525734 td .filtered99999 , =0A#yiv1235525734 td .filtered99999 =
+ img, =0A#yiv1235525734 td .filtered99999 , =0A#yiv1235525734 td .filtered9=
+9999  img =0A    {width:1px !important;}=0A=0A=0A#yiv1235525734 div .filter=
+ed99999  {clear:both;float:right;padding-left:10px;padding-right:10px;}=0A=
+=0A=0A#yiv1235525734 div .filtered99999 , =0A#yiv1235525734 div .filtered99=
+999 , =0A#yiv1235525734 div .filtered99999 , =0A#yiv1235525734 div .filtere=
+d99999 =0A    {width:auto !important;}=0A#yiv1235525734 =0A</style>=0A<div>=
+=0A<table id=3D"yiv1235525734frame" width=3D"100%" cellpadding=3D"0" cellsp=
+acing=3D"0" bgcolor=3D"#F5F5F1" border=3D"0">=0A    <tbody><tr>=0A        <=
+td width=3D"10" id=3D"yiv1235525734frame-left">=0A            =0A    =0A<im=
+g border=3D"0" style=3D"display:block;" src=3D"http://www.etsy.com/images/e=
+mail/email_spacer.gif" height=3D"1" width=3D"10">        </td>=0A        <t=
+d>=0A            <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0=
+" border=3D"0">=0A                <tbody><tr>=0A                    <td>=0A=
+                        <table align=3D"center" width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0">=0A    <tbody><tr>=0A        <td clas=
+s=3D"yiv1235525734header-top" height=3D"19">=0A                =0A=0A<img b=
+order=3D"0" style=3D"display:block;" src=3D"http://www.etsy.com/images/emai=
+l/email_spacer.gif" height=3D"19" width=3D"1">        </td>=0A        <td c=
+lass=3D"yiv1235525734header-top" height=3D"19">=0A                =0A=0A<im=
+g border=3D"0" style=3D"display:block;" src=3D"http://www.etsy.com/images/e=
+mail/email_spacer.gif" height=3D"19" width=3D"1">        </td>=0A        <t=
+d class=3D"yiv1235525734header-top" height=3D"19">=0A                =0A=0A=
+<img border=3D"0" style=3D"display:block;" src=3D"http://www.etsy.com/image=
+s/email/email_spacer.gif" height=3D"19" width=3D"1">        </td>=0A       =
+ <td class=3D"yiv1235525734header-top" height=3D"19">=0A                =0A=
+=0A<img border=3D"0" style=3D"display:block;" src=3D"http://www.etsy.com/im=
+ages/email/email_spacer.gif" height=3D"19" width=3D"1">        </td>=0A    =
+</tr>=0A    <tr>=0A        <td id=3D"yiv1235525734logo-left" width=3D"30">=
+=0A            =0A    =0A<img border=3D"0" style=3D"display:block;" src=3D"=
+http://www.etsy.com/images/email/email_spacer.gif" height=3D"1" width=3D"30=
+">        </td>=0A        <td align=3D"left" width=3D"150">=0A             =
+                                       <a rel=3D"nofollow" target=3D"_blank=
+" href=3D"http://www.etsy.com/?utm_source=3Dtransaction&amp;utm_medium=3Dtr=
+ans_email&amp;utm_campaign=3Dpurchase_buyer" style=3D"color:#0192b5;text-de=
+coration:none;">=0A                                <img border=3D"0" width=
+=3D"47" height=3D"24" style=3D"display:block;" src=3D"http://www.etsy.com/i=
+mages/email/etsy_logo@2x.png">=0A            </a>=0A        </td>=0A       =
+ <td align=3D"right" style=3D"font-size:6px;">=0A                          =
+      </td>=0A        <td id=3D"yiv1235525734logo-right" width=3D"30">=0A  =
+              =0A=0A<img border=3D"0" style=3D"display:block;" src=3D"http:=
+//www.etsy.com/images/email/email_spacer.gif" height=3D"30" width=3D"1">   =
+     </td>=0A    </tr>=0A    <tr>=0A        <td>=0A                =0A=0A<i=
+mg border=3D"0" style=3D"display:block;" src=3D"http://www.etsy.com/images/=
+email/email_spacer.gif" height=3D"11" width=3D"1">        </td>=0A        <=
+td>=0A                =0A=0A<img border=3D"0" style=3D"display:block;" src=
+=3D"http://www.etsy.com/images/email/email_spacer.gif" height=3D"11" width=
+=3D"1">        </td>=0A        <td>=0A                =0A=0A<img border=3D"=
+0" style=3D"display:block;" src=3D"http://www.etsy.com/images/email/email_s=
+pacer.gif" height=3D"11" width=3D"1">        </td>=0A        <td>=0A       =
+         =0A=0A<img border=3D"0" style=3D"display:block;" src=3D"http://www=
+.etsy.com/images/email/email_spacer.gif" height=3D"11" width=3D"1">        =
+</td>=0A    </tr>=0A</tbody></table>                    </td>=0A           =
+     </tr>=0A                <tr>=0A                    <td>=0A            =
+            <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" borde=
+r=3D"0">=0A    <tbody><tr height=3D"10">=0A        <td class=3D"yiv12355257=
+34inner-frame-left" height=3D"10" width=3D"10">=0A            =0A=0A<img bo=
+rder=3D"0" style=3D"display:block;" src=3D"http://www.etsy.com/images/email=
+/email_spacer.gif" height=3D"10" width=3D"10">        </td>=0A        <td h=
+eight=3D"10" width=3D"10">=0A            <img border=3D"0" style=3D"display=
+:block;" src=3D"http://www.etsy.com/images/email/white_box_top_left.png" he=
+ight=3D"10" width=3D"10">=0A        </td>=0A        <td valign=3D"top" heig=
+ht=3D"10" bgcolor=3D"white" style=3D"border-collapse:collapse;line-height:1=
+px;">=0A            <table id=3D"yiv1235525734frame-top" width=3D"100%" cel=
+lpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-top-width:1px=
+;border-top-color:#eaeae3;border-top-style:solid;">=0A            <tbody><t=
+r><td style=3D"border-collapse:collapse;line-height:1px;">=0A=0A<img border=
+=3D"0" style=3D"display:block;" src=3D"http://www.etsy.com/images/email/spa=
+cer.gif" height=3D"7" width=3D"100%"></td></tr></tbody></table>=0A        <=
+/td>=0A        <td height=3D"10" width=3D"10" style=3D"border-collapse:coll=
+apse;">=0A            <img border=3D"0" style=3D"display:block;" src=3D"htt=
+p://www.etsy.com/images/email/white_box_top_right.png" height=3D"10" width=
+=3D"10">=0A        </td>=0A        <td class=3D"yiv1235525734inner-frame-ri=
+ght" height=3D"10" width=3D"10">=0A            =0A=0A<img border=3D"0" styl=
+e=3D"display:block;" src=3D"http://www.etsy.com/images/email/email_spacer.g=
+if" height=3D"10" width=3D"10">        </td>=0A    </tr>=0A    <tr>=0A     =
+   <td class=3D"yiv1235525734inner-frame-left" width=3D"10">=0A            =
+=0A    =0A<img border=3D"0" style=3D"display:block;" src=3D"http://www.etsy=
+.com/images/email/email_spacer.gif" height=3D"1" width=3D"10">        </td>=
+=0A        <td colspan=3D"3" bgcolor=3D"white">=0A            <table id=3D"=
+yiv1235525734frame-body" width=3D"616" cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0" style=3D"border-collapse:collapse;border-left-width:1px;border=
+-left-color:#eaeae3;border-left-style:solid;border-right-width:1px;border-r=
+ight-color:#eaeae3;border-right-style:solid;">=0A                <tbody><tr=
+>=0A                    <td style=3D"border-collapse:collapse;">=0A        =
+                <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0">=0A                            <tbody><tr id=3D"yiv1235525734to=
+p-padding" height=3D"10">=0A                                <td height=3D"1=
+0">=0A                                    =0A=0A<img border=3D"0" style=3D"=
+display:block;" src=3D"http://www.etsy.com/images/email/spacer.gif" height=
+=3D"10" width=3D"1">                                </td>=0A               =
+             </tr>=0A                            <tr>=0A                   =
+             <td>=0A                                    <table width=3D"100=
+%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">=0A    <tbody><tr>=0A  =
+      <td class=3D"yiv1235525734sides" width=3D"20">=0A            =0A    =
+=0A<img border=3D"0" style=3D"display:block;" src=3D"http://www.etsy.com/im=
+ages/email/spacer.gif" height=3D"1" width=3D"20">        </td>=0A        <t=
+d style=3D"line-height:0px;">=0A                    =0A=0A<img border=3D"0"=
+ style=3D"display:block;" src=3D"http://www.etsy.com/images/email/spacer.gi=
+f" height=3D"6" width=3D"1">    =0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A    =0A<div class=3D"yiv1235525734normal-copy yiv12355257=
+34copy" style=3D"font-family: arial, helvetica, sans-serif; color: rgb(51, =
+51, 51); font-size: 12px; line-height: 18px;">    Hi fannychung,=0A</div>=
+=09=09    =0A=0A<img border=3D"0" style=3D"display:block;" src=3D"http://ww=
+w.etsy.com/images/email/spacer.gif" height=3D"12" width=3D"1">            =
+=0A<div class=3D"yiv1235525734normal-copy yiv1235525734copy" style=3D"font-=
+family: arial, helvetica, sans-serif; color: rgb(51, 51, 51); font-size: 12=
+px; line-height: 18px;">                    =0A            Congratulations =
+on your Etsy order from <a rel=3D"nofollow" target=3D"_blank" href=3D"http:=
+//www.etsy.com/shop/JustJaynes?utm_source=3Dtransaction&amp;utm_medium=3Dtr=
+ans_email&amp;utm_campaign=3Dpurchase_buyer" style=3D"color:#0192b5;text-de=
+coration:none;">JustJaynes</a>.=0A        =0A            </div>=09=09      =
+      =0A<div class=3D"yiv1235525734normal-copy yiv1235525734copy" style=3D=
+"font-family: arial, helvetica, sans-serif; color: rgb(51, 51, 51); font-si=
+ze: 12px; line-height: 18px;">    =0A        Your order number is: <a rel=
+=3D"nofollow" target=3D"_blank" href=3D"http://www.etsy.com/your/orders/647=
+01134?utm_source=3Dtransaction&amp;utm_medium=3Dtrans_email&amp;utm_campaig=
+n=3Dpurchase_buyer" style=3D"color:#0192b5;text-decoration:none;">64701134<=
+/a>.=0A    =0A</div>=09=09        <div style=3D"clear:both;">=0A           =
+ =0A=0A<img border=3D"0" style=3D"display:block;" src=3D"http://www.etsy.co=
+m/images/email/spacer.gif" height=3D"6" width=3D"1">        =0A    =0A    =
+=0A=0A<table cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"=
+100%">=0A    <tbody>=0A        <tr>=0A            <td>=0A                <i=
+mg src=3D"http://www.etsy.com/images/email/spacer.gif" height=3D"10" style=
+=3D"display:block;">=0A            </td>=0A        </tr>=0A    </tbody>=0A<=
+/table>=0A<table cellspacing=3D"0" align=3D"center" style=3D"border-top-col=
+or:#eaeae3;border-top-style:solid;border-top-width:1px;" width=3D"100%" cel=
+lpadding=3D"0">=0A    <tbody>=0A        <tr>=0A            <td>=0A         =
+       <img src=3D"http://www.etsy.com/images/email/spacer.gif" height=3D"1=
+5" style=3D"display:block;">=0A            </td>=0A        </tr>=0A    </tb=
+ody>=0A</table>            =0A=0A<img border=3D"0" style=3D"display:block;"=
+ src=3D"http://www.etsy.com/images/email/spacer.gif" height=3D"6" width=3D"=
+1">    </div>=0A=0A        =0A    =0A<div class=3D"yiv1235525734large-copy =
+yiv1235525734copy" style=3D"font-family: arial, helvetica, sans-serif; colo=
+r: rgb(51, 51, 51); font-size: 24px; line-height: 30px;">=0A            Ord=
+er details=0A=0A</div>                <div style=3D"clear:both;">=0A       =
+     =0A=0A<img border=3D"0" style=3D"display:block;" src=3D"http://www.ets=
+y.com/images/email/spacer.gif" height=3D"6" width=3D"1">        =0A    =0A =
+   =0A=0A<table cellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=
+=3D"100%">=0A    <tbody>=0A        <tr>=0A            <td>=0A              =
+  <img src=3D"http://www.etsy.com/images/email/spacer.gif" height=3D"10" st=
+yle=3D"display:block;">=0A            </td>=0A        </tr>=0A    </tbody>=
+=0A</table>=0A<table cellspacing=3D"0" align=3D"center" style=3D"border-top=
+-color:#eaeae3;border-top-style:solid;border-top-width:1px;" width=3D"100%"=
+ cellpadding=3D"0">=0A    <tbody>=0A        <tr>=0A            <td>=0A     =
+           <img src=3D"http://www.etsy.com/images/email/spacer.gif" height=
+=3D"15" style=3D"display:block;">=0A            </td>=0A        </tr>=0A   =
+ </tbody>=0A</table>            =0A=0A<img border=3D"0" style=3D"display:bl=
+ock;" src=3D"http://www.etsy.com/images/email/spacer.gif" height=3D"6" widt=
+h=3D"1">    </div>=0A=0A                                        <div class=
+=3D"yiv1235525734fifty50-left" style=3D"float:left;width:50%;">=0A    <tabl=
+e width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=0A      =
+  <tbody><tr>=0A            <td>=0A                =0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A    =0A<div class=3D"yiv1235525734bold-copy yiv1235525734copy" =
+style=3D"font-family: arial, helvetica, sans-serif; color: rgb(51, 51, 51);=
+ font-size: 12px; line-height: 18px;">=0A    <b>=0A            =0A        P=
+ayment method=0A    =0A=0A    </b>=0A</div>=0A=0A        =0A<div class=3D"y=
+iv1235525734normal-copy yiv1235525734copy" style=3D"font-family: arial, hel=
+vetica, sans-serif; color: rgb(51, 51, 51); font-size: 12px; line-height: 1=
+8px;">    PayPal=0A</div>=09=09                =0A<div class=3D"yiv12355257=
+34small-grey-copy yiv1235525734copy" style=3D"font-family: arial, helvetica=
+, sans-serif; color: rgb(153, 153, 153); font-size: 11px; line-height: 14px=
+;">=0A        =0A        You paid <a rel=3D"nofollow" ymailto=3D"mailto:cjm=
+einke@hotmail.com" target=3D"_blank" href=3D"mailto:cjmeinke@hotmail.com" s=
+tyle=3D"text-decoration:none;color:#0192b5;">cjmeinke@hotmail.com</a>=0A   =
+ =0A=0A</div>            =0A<div class=3D"yiv1235525734small-grey-copy yiv1=
+235525734copy" style=3D"font-family: arial, helvetica, sans-serif; color: r=
+gb(153, 153, 153); font-size: 11px; line-height: 14px;">=0A        <a rel=
+=3D"nofollow" target=3D"_blank" href=3D"http://www.etsy.com/your/orders/647=
+01134?utm_source=3Dtransaction&amp;utm_medium=3Dtrans_email&amp;utm_campaig=
+n=3Dpurchase_buyer" style=3D"color:#0192b5;text-decoration:none;">=0A      =
+  =0A            View your receipt=0A        =0A    </a>=0A=0A</div>    =0A=
+            </td>=0A            <td class=3D"yiv1235525734fifty50-padding" =
+width=3D"15">=0A                =0A    =0A<img border=3D"0" style=3D"displa=
+y:block;" src=3D"http://www.etsy.com/images/email/spacer.gif" height=3D"1" =
+width=3D"15">            </td>=0A        </tr>=0A    </tbody></table>=0A</d=
+iv>=0A<div class=3D"yiv1235525734fifty50-right" style=3D"float:left;width:5=
+0%;">=0A    <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0">=0A        <tbody><tr>=0A            <td class=3D"yiv1235525734fift=
+y50-padding" width=3D"15">=0A                =0A    =0A<img border=3D"0" st=
+yle=3D"display:block;" src=3D"http://www.etsy.com/images/email/spacer.gif" =
+height=3D"1" width=3D"15">            </td>=0A            <td>=0A          =
+          =0A<div class=3D"yiv1235525734bold-copy yiv1235525734copy" style=
+=3D"font-family: arial, helvetica, sans-serif; color: rgb(51, 51, 51); font=
+-size: 12px; line-height: 18px;">=0A    <b>=0A            Shipping Address=
+=0A=0A    </b>=0A</div>=0A        =0A<div class=3D"yiv1235525734normal-copy=
+ yiv1235525734copy" style=3D"font-family: arial, helvetica, sans-serif; col=
+or: rgb(51, 51, 51); font-size: 12px; line-height: 18px;">Chiafen Chung</di=
+v>=09=09                =0A<div class=3D"yiv1235525734normal-copy yiv123552=
+5734copy" style=3D"font-family: arial, helvetica, sans-serif; color: rgb(51=
+, 51, 51); font-size: 12px; line-height: 18px;">247 W 87 St. Apt 17F</div>=
+=09=09                            =0A<div class=3D"yiv1235525734normal-copy=
+ yiv1235525734copy" style=3D"font-family: arial, helvetica, sans-serif; col=
+or: rgb(51, 51, 51); font-size: 12px; line-height: 18px;">New York, NY 1002=
+4</div>=09=09            =0A<div class=3D"yiv1235525734normal-copy yiv12355=
+25734copy" style=3D"font-family: arial, helvetica, sans-serif; color: rgb(5=
+1, 51, 51); font-size: 12px; line-height: 18px;">United States</div>=09=09=
+=0A            </td>=0A        </tr>=0A    </tbody></table>=0A</div>       =
+         <div style=3D"clear:both;">=0A            =0A=0A<img border=3D"0" =
+style=3D"display:block;" src=3D"http://www.etsy.com/images/email/spacer.gif=
+" height=3D"6" width=3D"1">        =0A    =0A    =0A=0A<table cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center" width=3D"100%">=0A    <tbody>=0A =
+       <tr>=0A            <td>=0A                <img src=3D"http://www.ets=
+y.com/images/email/spacer.gif" height=3D"10" style=3D"display:block;">=0A  =
+          </td>=0A        </tr>=0A    </tbody>=0A</table>=0A<table cellspac=
+ing=3D"0" align=3D"center" style=3D"border-top-color:#eaeae3;border-top-sty=
+le:solid;border-top-width:1px;" width=3D"100%" cellpadding=3D"0">=0A    <tb=
+ody>=0A        <tr>=0A            <td>=0A                <img src=3D"http:/=
+/www.etsy.com/images/email/spacer.gif" height=3D"15" style=3D"display:block=
+;">=0A            </td>=0A        </tr>=0A    </tbody>=0A</table>          =
+  =0A=0A<img border=3D"0" style=3D"display:block;" src=3D"http://www.etsy.c=
+om/images/email/spacer.gif" height=3D"6" width=3D"1">    </div>=0A=0A      =
+      =0A=0A<img border=3D"0" style=3D"display:block;" src=3D"http://www.et=
+sy.com/images/email/spacer.gif" height=3D"18" width=3D"1">            =0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A<div class=3D"yiv1235525734avatar-media=
+-block">=0A<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0">=0A        <tbody><tr>=0A        <td class=3D"yiv1235525734left" val=
+ign=3D"top" width=3D"75">=0A                <a rel=3D"nofollow" target=3D"_=
+blank" href=3D"http://www.etsy.com/transaction/96529313?utm_source=3Dtransa=
+ction&amp;utm_medium=3Dtrans_email&amp;utm_campaign=3Dpurchase_buyer">=0A=
+=09<img src=3D"http://img1.etsystatic.com/000/0/5214749/il_75x75.307921801.=
+jpg" border=3D"0" style=3D"border-color:#f5f5f1;padding:3px;display:block;b=
+order-width:1px;border-style:solid;background-color:#fff;" width=3D"75">=0A=
+    </a>=0A=0A        </td>=0A        <td class=3D"yiv1235525734padding" wi=
+dth=3D"20">=0A            =0A    =0A<img border=3D"0" style=3D"display:bloc=
+k;" src=3D"http://www.etsy.com/images/email/spacer-trans.gif" height=3D"1" =
+width=3D"20">        </td>=0A        <td class=3D"yiv1235525734right" valig=
+n=3D"top" style=3D"line-height:0px;">=0A                            =0A<div=
+ class=3D"yiv1235525734bold-copy yiv1235525734copy" style=3D"font-family: a=
+rial, helvetica, sans-serif; color: rgb(51, 51, 51); font-size: 12px; line-=
+height: 18px;">=0A    <b>=0A            <a rel=3D"nofollow" style=3D"text-d=
+ecoration:none;color:#0192b5;" target=3D"_blank" href=3D"http://www.etsy.co=
+m/transaction/96529313?utm_source=3Dtransaction&amp;utm_medium=3Dtrans_emai=
+l&amp;utm_campaign=3Dpurchase_buyer">=0A        Sterling silver custom init=
+ial charm necklace - personalized necklace=0A    </a>=0A=0A    </b>=0A</div=
+>            =0A<div class=3D"yiv1235525734normal-copy yiv1235525734copy" s=
+tyle=3D"font-family: arial, helvetica, sans-serif; color: rgb(51, 51, 51); =
+font-size: 12px; line-height: 18px;">    Shop: JustJaynes=0A</div>=09=09   =
+         =0A<div class=3D"yiv1235525734normal-copy yiv1235525734copy" style=
+=3D"font-family: arial, helvetica, sans-serif; color: rgb(51, 51, 51); font=
+-size: 12px; line-height: 18px;">    Transaction ID: 96529313=0A</div>=09=
+=09            =0A<div class=3D"yiv1235525734normal-copy yiv1235525734copy"=
+ style=3D"font-family: arial, helvetica, sans-serif; color: rgb(51, 51, 51)=
+; font-size: 12px; line-height: 18px;">    Quantity: 1=0A</div>=09=09      =
+      =0A<div class=3D"yiv1235525734normal-copy yiv1235525734copy" style=3D=
+"font-family: arial, helvetica, sans-serif; color: rgb(51, 51, 51); font-si=
+ze: 12px; line-height: 18px;">    Price: =0A    $26.50=0A    <span class=3D=
+"yiv1235525734small-caps-copy yiv1235525734copy" style=3D"font-variant:smal=
+l-caps;">USD</span></div>=09=09    =0A        </td>=0A    </tr>=0A</tbody><=
+/table></div>            =0A=0A<img border=3D"0" style=3D"display:block;" s=
+rc=3D"http://www.etsy.com/images/email/spacer.gif" height=3D"12" width=3D"1=
+">            <div style=3D"clear:both;">=0A            =0A=0A<img border=
+=3D"0" style=3D"display:block;" src=3D"http://www.etsy.com/images/email/spa=
+cer.gif" height=3D"6" width=3D"1">        =0A    =0A    =0A=0A<table cellsp=
+acing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"100%">=0A    <tbody=
+>=0A        <tr>=0A            <td>=0A                <img src=3D"http://ww=
+w.etsy.com/images/email/spacer.gif" height=3D"10" style=3D"display:block;">=
+=0A            </td>=0A        </tr>=0A    </tbody>=0A</table>=0A<table cel=
+lspacing=3D"0" align=3D"center" style=3D"border-top-color:#eaeae3;border-to=
+p-style:solid;border-top-width:1px;" width=3D"100%" cellpadding=3D"0">=0A  =
+  <tbody>=0A        <tr>=0A            <td>=0A                <img src=3D"h=
+ttp://www.etsy.com/images/email/spacer.gif" height=3D"15" style=3D"display:=
+block;">=0A            </td>=0A        </tr>=0A    </tbody>=0A</table>     =
+       =0A=0A<img border=3D"0" style=3D"display:block;" src=3D"http://www.e=
+tsy.com/images/email/spacer.gif" height=3D"6" width=3D"1">    </div>=0A=0A=
+=0A                            <div class=3D"yiv1235525734fifty50-left" sty=
+le=3D"float:left;width:50%;">=0A    <table width=3D"100%" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0">=0A        <tbody><tr>=0A            <td>=
+=0A                    =0A    =0A<div class=3D"yiv1235525734large-copy yiv1=
+235525734copy" style=3D"font-family: arial, helvetica, sans-serif; color: r=
+gb(51, 51, 51); font-size: 24px; line-height: 30px;">=0A            Order t=
+otal=0A=0A</div>=0A            </td>=0A            <td class=3D"yiv12355257=
+34fifty50-padding" width=3D"15">=0A                =0A    =0A<img border=3D=
+"0" style=3D"display:block;" src=3D"http://www.etsy.com/images/email/spacer=
+.gif" height=3D"1" width=3D"15">            </td>=0A        </tr>=0A    </t=
+body></table>=0A</div>=0A<div class=3D"yiv1235525734fifty50-right" style=3D=
+"float:left;width:50%;">=0A    <table width=3D"100%" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0">=0A        <tbody><tr>=0A            <td class=
+=3D"yiv1235525734fifty50-padding" width=3D"15">=0A                =0A    =
+=0A<img border=3D"0" style=3D"display:block;" src=3D"http://www.etsy.com/im=
+ages/email/spacer.gif" height=3D"1" width=3D"15">            </td>=0A      =
+      <td>=0A                =0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A<table border=3D"0" width=3D"1=
+00%" cellpadding=3D"0" cellspacing=3D"0">=0A    <tbody>=0A        <tr>=0A  =
+          <td style=3D"border-collapse:collapse;text-align:left;">=0A      =
+              =0A<div class=3D"yiv1235525734normal-copy yiv1235525734copy" =
+style=3D"font-family: arial, helvetica, sans-serif; color: rgb(51, 51, 51);=
+ font-size: 12px; line-height: 18px;">    Item total: =0A</div>=09=09      =
+      </td>=0A            <td style=3D"border-collapse:collapse;text-align:=
+right;">=0A                    =0A<div class=3D"yiv1235525734normal-copy yi=
+v1235525734copy" style=3D"font-family: arial, helvetica, sans-serif; color:=
+ rgb(51, 51, 51); font-size: 12px; line-height: 18px;">    $26.50=0A    <sp=
+an class=3D"yiv1235525734small-caps-copy yiv1235525734copy" style=3D"font-v=
+ariant:small-caps;">usd</span>=0A</div>=09=09            </td>=0A        </=
+tr>=0A=0A=0A    =0A=0A        <tr>=0A            <td style=3D"border-collap=
+se:collapse;text-align:left;">=0A                    =0A<div class=3D"yiv12=
+35525734normal-copy yiv1235525734copy" style=3D"font-family: arial, helveti=
+ca, sans-serif; color: rgb(51, 51, 51); font-size: 12px; line-height: 18px;=
+">    Shipping: =0A</div>=09=09            </td>=0A            <td style=3D=
+"border-collapse:collapse;text-align:right;">=0A                    =0A<div=
+ class=3D"yiv1235525734normal-copy yiv1235525734copy" style=3D"font-family:=
+ arial, helvetica, sans-serif; color: rgb(51, 51, 51); font-size: 12px; lin=
+e-height: 18px;">             $3.50=0A        <span class=3D"yiv1235525734s=
+mall-caps-copy yiv1235525734copy" style=3D"font-variant:small-caps;">usd</s=
+pan>=0A</div>=09=09            </td>=0A        </tr>=0A=0A=0A        <tr>=
+=0A            <td style=3D"border-collapse:collapse;text-align:left;">=0A =
+                                       =0A<div class=3D"yiv1235525734normal=
+-copy yiv1235525734copy" style=3D"font-family: arial, helvetica, sans-serif=
+; color: rgb(51, 51, 51); font-size: 12px; line-height: 18px;">    Sales ta=
+x: =0A</div>=09=09                    =0A            </td>=0A            <t=
+d style=3D"border-collapse:collapse;text-align:right;">=0A                 =
+   =0A<div class=3D"yiv1235525734normal-copy yiv1235525734copy" style=3D"fo=
+nt-family: arial, helvetica, sans-serif; color: rgb(51, 51, 51); font-size:=
+ 12px; line-height: 18px;">    $0.00=0A    <span class=3D"yiv1235525734smal=
+l-caps-copy yiv1235525734copy" style=3D"font-variant:small-caps;">usd</span=
+>=0A</div>=09=09            </td>=0A        </tr>=0A=0A=0A        =0A=0A=0A=
+        <tr>=0A            <td colspan=3D"2" style=3D"border-collapse:colla=
+pse;text-align:left;">=0A                    =0A=0A<img border=3D"0" style=
+=3D"display:block;" src=3D"http://www.etsy.com/images/email/spacer.gif" hei=
+ght=3D"4" width=3D"1">                <table cellspacing=3D"0" align=3D"cen=
+ter" style=3D"border-top-color:#eaeae3;border-top-style:solid;border-top-wi=
+dth:1px;" width=3D"100%" cellpadding=3D"0">=0A    <tbody><tr>=0A        <td=
+>=0A                =0A=0A<img border=3D"0" style=3D"display:block;" src=3D=
+"http://www.etsy.com/images/email/spacer.gif" height=3D"1" width=3D"1">    =
+    </td>=0A    </tr>=0A</tbody></table>                    =0A=0A<img bord=
+er=3D"0" style=3D"display:block;" src=3D"http://www.etsy.com/images/email/s=
+pacer.gif" height=3D"4" width=3D"1">            </td>=0A        </tr>=0A=0A=
+=0A        <tr>=0A            <td style=3D"border-collapse:collapse;text-al=
+ign:left;">=0A                    =0A<div class=3D"yiv1235525734normal-copy=
+ yiv1235525734copy" style=3D"font-family: arial, helvetica, sans-serif; col=
+or: rgb(51, 51, 51); font-size: 12px; line-height: 18px;">    Order total: =
+=0A</div>=09=09            </td>=0A            <td style=3D"border-collapse=
+:collapse;text-align:right;">=0A                    =0A<div class=3D"yiv123=
+5525734normal-copy yiv1235525734copy" style=3D"font-family: arial, helvetic=
+a, sans-serif; color: rgb(51, 51, 51); font-size: 12px; line-height: 18px;"=
+>            $30.00=0A        <span class=3D"yiv1235525734small-caps-copy y=
+iv1235525734copy" style=3D"font-variant:small-caps;">usd</span>=0A    </div=
+>=09=09            </td>=0A        </tr>=0A    </tbody>=0A</table>=0A      =
+      </td>=0A        </tr>=0A    </tbody></table>=0A</div>                =
+        <div style=3D"clear:both;">=0A            =0A=0A<img border=3D"0" s=
+tyle=3D"display:block;" src=3D"http://www.etsy.com/images/email/spacer.gif"=
+ height=3D"6" width=3D"1">        =0A    =0A    =0A=0A<table cellspacing=3D=
+"0" cellpadding=3D"0" align=3D"center" width=3D"100%">=0A    <tbody>=0A    =
+    <tr>=0A            <td>=0A                <img src=3D"http://www.etsy.c=
+om/images/email/spacer.gif" height=3D"10" style=3D"display:block;">=0A     =
+       </td>=0A        </tr>=0A    </tbody>=0A</table>=0A<table cellspacing=
+=3D"0" align=3D"center" style=3D"border-top-color:#eaeae3;border-top-style:=
+solid;border-top-width:1px;" width=3D"100%" cellpadding=3D"0">=0A    <tbody=
+>=0A        <tr>=0A            <td>=0A                <img src=3D"http://ww=
+w.etsy.com/images/email/spacer.gif" height=3D"15" style=3D"display:block;">=
+=0A            </td>=0A        </tr>=0A    </tbody>=0A</table>            =
+=0A=0A<img border=3D"0" style=3D"display:block;" src=3D"http://www.etsy.com=
+/images/email/spacer.gif" height=3D"6" width=3D"1">    </div>=0A=0A        =
+    =0A=0A    =0A<div class=3D"yiv1235525734bold-copy yiv1235525734copy" st=
+yle=3D"font-family: arial, helvetica, sans-serif; color: rgb(51, 51, 51); f=
+ont-size: 12px; line-height: 18px;">=0A    <b>=0A            =0A        You=
+r note to the shop=0A    =0A=0A    </b>=0A</div>    =0A<div class=3D"yiv123=
+5525734normal-copy yiv1235525734copy" style=3D"font-family: arial, helvetic=
+a, sans-serif; color: rgb(51, 51, 51); font-size: 12px; line-height: 18px;"=
+>I'd like to have a letter S with 18" chain. thanks.</div>=09=09           =
+                     <div style=3D"clear:both;">=0A            =0A=0A<img b=
+order=3D"0" style=3D"display:block;" src=3D"http://www.etsy.com/images/emai=
+l/spacer.gif" height=3D"6" width=3D"1">        =0A    =0A    =0A=0A<table c=
+ellspacing=3D"0" cellpadding=3D"0" align=3D"center" width=3D"100%">=0A    <=
+tbody>=0A        <tr>=0A            <td>=0A                <img src=3D"http=
+://www.etsy.com/images/email/spacer.gif" height=3D"10" style=3D"display:blo=
+ck;">=0A            </td>=0A        </tr>=0A    </tbody>=0A</table>=0A<tabl=
+e cellspacing=3D"0" align=3D"center" style=3D"border-top-color:#eaeae3;bord=
+er-top-style:solid;border-top-width:1px;" width=3D"100%" cellpadding=3D"0">=
+=0A    <tbody>=0A        <tr>=0A            <td>=0A                <img src=
+=3D"http://www.etsy.com/images/email/spacer.gif" height=3D"15" style=3D"dis=
+play:block;">=0A            </td>=0A        </tr>=0A    </tbody>=0A</table>=
+            =0A=0A<img border=3D"0" style=3D"display:block;" src=3D"http://=
+www.etsy.com/images/email/spacer.gif" height=3D"6" width=3D"1">    </div>=
+=0A=0A                =0A<div class=3D"yiv1235525734bold-copy yiv1235525734=
+copy" style=3D"font-family: arial, helvetica, sans-serif; color: rgb(51, 51=
+, 51); font-size: 12px; line-height: 18px;">=0A    <b>=0A            Note f=
+rom Cathy=0A=0A    </b>=0A</div>    =0A<div class=3D"yiv1235525734normal-co=
+py yiv1235525734copy" style=3D"font-family: arial, helvetica, sans-serif; c=
+olor: rgb(51, 51, 51); font-size: 12px; line-height: 18px;">Thank you for y=
+our order!=0A=0ANew items are listed often. Join my weekly mailing list for=
+ valuable information and to see new items. Visit my website http://justjay=
+nes.com/ to sign up.=0A=0AINTERNATIONAL BUYERS: If you would like to upgrad=
+e your shipping to Priority Mail, it is $14.50 extra and can ship within th=
+e normal 1-4 day production schedule. With Priority Mail, you can expect to=
+ receive your order 6-10 days after it ships. This is much faster than 3-4 =
+weeks by regular mail.</div>=09=09                    <div style=3D"clear:b=
+oth;">=0A            =0A=0A<img border=3D"0" style=3D"display:block;" src=
+=3D"http://www.etsy.com/images/email/spacer.gif" height=3D"6" width=3D"1"> =
+       =0A    =0A    =0A=0A<table cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" width=3D"100%">=0A    <tbody>=0A        <tr>=0A            <td>=
+=0A                <img src=3D"http://www.etsy.com/images/email/spacer.gif"=
+ height=3D"10" style=3D"display:block;">=0A            </td>=0A        </tr=
+>=0A    </tbody>=0A</table>=0A<table cellspacing=3D"0" align=3D"center" sty=
+le=3D"border-top-color:#eaeae3;border-top-style:solid;border-top-width:1px;=
+" width=3D"100%" cellpadding=3D"0">=0A    <tbody>=0A        <tr>=0A        =
+    <td>=0A                <img src=3D"http://www.etsy.com/images/email/spa=
+cer.gif" height=3D"15" style=3D"display:block;">=0A            </td>=0A    =
+    </tr>=0A    </tbody>=0A</table>            =0A=0A<img border=3D"0" styl=
+e=3D"display:block;" src=3D"http://www.etsy.com/images/email/spacer.gif" he=
+ight=3D"6" width=3D"1">    </div>=0A=0A        =0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A    =0A    =0A<div class=3D"yiv1235525734large-copy yiv12355=
+25734copy" style=3D"font-family: arial, helvetica, sans-serif; color: rgb(5=
+1, 51, 51); font-size: 24px; line-height: 30px;">=0A            =0A        =
+Questions=0A    =0A=0A</div>    =0A=0A<img border=3D"0" style=3D"display:bl=
+ock;" src=3D"http://www.etsy.com/images/email/spacer.gif" height=3D"12" wid=
+th=3D"1">        =0A<div class=3D"yiv1235525734bold-copy yiv1235525734copy"=
+ style=3D"font-family: arial, helvetica, sans-serif; color: rgb(51, 51, 51)=
+; font-size: 12px; line-height: 18px;">=0A    <b>=0A            =0A        =
+If you have any questions about this order, please contact the seller direc=
+tly=0A    =0A=0A    </b>=0A</div>    =0A=0A<img border=3D"0" style=3D"displ=
+ay:block;" src=3D"http://www.etsy.com/images/email/spacer.gif" height=3D"12=
+" width=3D"1">=0A=0A=0A<div class=3D"yiv1235525734avatar-media-block">=0A<t=
+able width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=0A   =
+     <tbody><tr>=0A        <td class=3D"yiv1235525734left" valign=3D"top" w=
+idth=3D"75">=0A                <a rel=3D"nofollow" target=3D"_blank" href=
+=3D"http://www.etsy.com/people/JustJaynes?utm_source=3Dtransaction&amp;utm_=
+medium=3Dtrans_email&amp;utm_campaign=3Dpurchase_buyer">=0A=09<img src=3D"h=
+ttp://img0.etsystatic.com/000/0/5400982/iusa_75x75.20145852.jpg" border=3D"=
+0" style=3D"border-color:#f5f5f1;padding:3px;display:block;border-width:1px=
+;border-style:solid;background-color:#fff;" width=3D"75">=0A    </a>=0A=0A =
+       </td>=0A        <td class=3D"yiv1235525734padding" width=3D"20">=0A =
+           =0A    =0A<img border=3D"0" style=3D"display:block;" src=3D"http=
+://www.etsy.com/images/email/spacer-trans.gif" height=3D"1" width=3D"20">  =
+      </td>=0A        <td class=3D"yiv1235525734right" valign=3D"top" style=
+=3D"line-height:0px;">=0A                    =0A<div class=3D"yiv1235525734=
+bold-copy yiv1235525734copy" style=3D"font-family: arial, helvetica, sans-s=
+erif; color: rgb(51, 51, 51); font-size: 12px; line-height: 18px;">=0A    <=
+b>=0A            <a rel=3D"nofollow" target=3D"_blank" href=3D"http://www.e=
+tsy.com/shop/JustJaynes?utm_source=3Dtransaction&amp;utm_medium=3Dtrans_ema=
+il&amp;utm_campaign=3Dpurchase_buyer" style=3D"text-decoration:none;color:#=
+0192b5;">=0A        Cathy=0A    </a>=0A=0A    </b>=0A</div>        =0A<div =
+class=3D"yiv1235525734normal-copy yiv1235525734copy" style=3D"font-family: =
+arial, helvetica, sans-serif; color: rgb(51, 51, 51); font-size: 12px; line=
+-height: 18px;">    Shop: JustJaynes=0A</div>=09=09        =0A=0A<img borde=
+r=3D"0" style=3D"display:block;" src=3D"http://www.etsy.com/images/email/sp=
+acer.gif" height=3D"12" width=3D"1">        =0A<div class=3D"yiv1235525734n=
+ormal-copy yiv1235525734copy" style=3D"font-family: arial, helvetica, sans-=
+serif; color: rgb(51, 51, 51); font-size: 12px; line-height: 18px;">    <a =
+rel=3D"nofollow" target=3D"_blank" href=3D"https://www.etsy.com/conversatio=
+ns/new?with_id=3D5400982&amp;utm_source=3Dtransaction&amp;utm_medium=3Dtran=
+s_email&amp;utm_campaign=3Dpurchase_buyer" style=3D"text-decoration:none;co=
+lor:#0192b5;">=0A        Send Cathy a convo=0A    </a>=0A    &nbsp;&nbsp;|&=
+nbsp;&nbsp;=0A    <a rel=3D"nofollow" ymailto=3D"mailto:Cathy@JustJaynes.co=
+m" target=3D"_blank" href=3D"mailto:Cathy@JustJaynes.com" style=3D"text-dec=
+oration:none;color:#0192b5;">=0A        Send Cathy an email=0A    </a>=0A</=
+div>=09=09=0A        </td>=0A    </tr>=0A</tbody></table></div>            =
+<div style=3D"clear:both;">=0A            =0A=0A<img border=3D"0" style=3D"=
+display:block;" src=3D"http://www.etsy.com/images/email/spacer.gif" height=
+=3D"6" width=3D"1">        =0A    =0A    =0A=0A<table cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" width=3D"100%">=0A    <tbody>=0A        <tr=
+>=0A            <td>=0A                <img src=3D"http://www.etsy.com/imag=
+es/email/spacer.gif" height=3D"10" style=3D"display:block;">=0A            =
+</td>=0A        </tr>=0A    </tbody>=0A</table>=0A<table cellspacing=3D"0" =
+align=3D"center" style=3D"border-top-color:#eaeae3;border-top-style:solid;b=
+order-top-width:1px;" width=3D"100%" cellpadding=3D"0">=0A    <tbody>=0A   =
+     <tr>=0A            <td>=0A                <img src=3D"http://www.etsy.=
+com/images/email/spacer.gif" height=3D"15" style=3D"display:block;">=0A    =
+        </td>=0A        </tr>=0A    </tbody>=0A</table>            =0A=0A<i=
+mg border=3D"0" style=3D"display:block;" src=3D"http://www.etsy.com/images/=
+email/spacer.gif" height=3D"6" width=3D"1">    </div>=0A=0A=0A            =
+=0A        =0A<div class=3D"yiv1235525734normal-copy yiv1235525734copy" sty=
+le=3D"font-family: arial, helvetica, sans-serif; color: rgb(51, 51, 51); fo=
+nt-size: 12px; line-height: 18px;">    =0A        If you were not involved =
+in this transaction, please forward this email to=0A        <a rel=3D"nofol=
+low" ymailto=3D"mailto:trust@etsy.com" target=3D"_blank" href=3D"mailto:tru=
+st@etsy.com" style=3D"color:#0192b5;text-decoration:none;">=0A            t=
+rust@etsy.com=0A        </a>=0A        and we will investigate right away.=
+=0A    =0A</div>=09=09        =0A=0A<img border=3D"0" style=3D"display:bloc=
+k;" src=3D"http://www.etsy.com/images/email/spacer.gif" height=3D"12" width=
+=3D"1">=0A        =0A<div class=3D"yiv1235525734normal-copy yiv1235525734co=
+py" style=3D"font-family: arial, helvetica, sans-serif; color: rgb(51, 51, =
+51); font-size: 12px; line-height: 18px;">    =0A        Thanks,<br>=0A    =
+    Etsy<br>=0A    =0A</div>=09=09=0A        </td>=0A        <td class=3D"y=
+iv1235525734sides" width=3D"20">=0A            =0A    =0A<img border=3D"0" =
+style=3D"display:block;" src=3D"http://www.etsy.com/images/email/spacer.gif=
+" height=3D"1" width=3D"20">        </td>=0A    </tr>=0A</tbody></table>=0A=
+                                </td>=0A                            </tr>=
+=0A                                                            <tr id=3D"yi=
+v1235525734bottom-padding" height=3D"10">=0A                               =
+     <td height=3D"10">=0A                                        =0A=0A<im=
+g border=3D"0" style=3D"display:block;" src=3D"http://www.etsy.com/images/e=
+mail/spacer.gif" height=3D"10" width=3D"1">                                =
+    </td>=0A                                </tr>=0A                       =
+                             </tbody></table>=0A                    </td>=
+=0A                </tr>=0A            </tbody></table>=0A        </td>=0A =
+       <td class=3D"yiv1235525734inner-frame-right" width=3D"10">=0A       =
+     =0A    =0A<img border=3D"0" style=3D"display:block;" src=3D"http://www=
+.etsy.com/images/email/email_spacer.gif" height=3D"1" width=3D"10">        =
+</td>=0A    </tr>=0A    <tr>=0A        <td class=3D"yiv1235525734inner-fram=
+e-left" width=3D"10">=0A            =0A    =0A<img border=3D"0" style=3D"di=
+splay:block;" src=3D"http://www.etsy.com/images/email/email_spacer.gif" hei=
+ght=3D"1" width=3D"10">        </td>=0A                    <td width=3D"10"=
+>=0A                <img border=3D"0" style=3D"display:block;" src=3D"http:=
+//www.etsy.com/images/email/white_box_bottom_left.png" width=3D"10">=0A    =
+        </td>=0A            <td height=3D"10" valign=3D"bottom" bgcolor=3D"=
+white">=0A                <table id=3D"yiv1235525734frame-bottom" width=3D"=
+100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-bott=
+om-width:1px;border-bottom-color:#eaeae3;border-bottom-style:solid;">=0A   =
+             <tbody><tr><td style=3D"border-collapse:collapse;">=0A=0A<img =
+border=3D"0" style=3D"display:block;" src=3D"http://www.etsy.com/images/ema=
+il/spacer.gif" height=3D"8" width=3D"100%"></td></tr></tbody></table>=0A   =
+         </td>=0A            <td width=3D"10">=0A                <img borde=
+r=3D"0" style=3D"display:block;" src=3D"http://www.etsy.com/images/email/wh=
+ite_box_bottom_right.png" width=3D"10">=0A            </td>=0A             =
+   <td class=3D"yiv1235525734inner-frame-right" width=3D"10">=0A           =
+ =0A    =0A<img border=3D"0" style=3D"display:block;" src=3D"http://www.ets=
+y.com/images/email/email_spacer.gif" height=3D"1" width=3D"10">        </td=
+>=0A    </tr>=0A</tbody></table>                    </td>=0A               =
+ </tr>=0A                <tr>=0A                    <td>=0A                =
+        <table align=3D"center" width=3D"100%" cellpadding=3D"0" cellspacin=
+g=3D"0" border=3D"0">=0A    <tbody><tr>=0A        <td>=0A                =
+=0A=0A<img border=3D"0" style=3D"display:block;" src=3D"http://www.etsy.com=
+/images/email/email_spacer.gif" height=3D"12" width=3D"1">        </td>=0A =
+       <td>=0A                =0A=0A<img border=3D"0" style=3D"display:bloc=
+k;" src=3D"http://www.etsy.com/images/email/email_spacer.gif" height=3D"12"=
+ width=3D"1">        </td>=0A    </tr>=0A    <tr>=0A        <td id=3D"yiv12=
+35525734footer-left" width=3D"30">=0A            =0A    =0A<img border=3D"0=
+" style=3D"display:block;" src=3D"http://www.etsy.com/images/email/email_sp=
+acer.gif" height=3D"1" width=3D"30">        </td>=0A        <td align=3D"le=
+ft">=0A                =0A<div class=3D"yiv1235525734tiny-grey-copy yiv1235=
+525734copy" style=3D"font-family: arial, helvetica, sans-serif; color: rgb(=
+153, 153, 153); font-size: 10px; line-height: 14px; text-align: left;">=0A =
+       =A9 2012 Etsy, Inc., 55 Washington Street, Suite 512, Brooklyn, NY, =
+11201, USA, Earth=0A    =0A</div>        </td>=0A    </tr>=0A    <tr>=0A   =
+     <td>=0A                =0A=0A<img border=3D"0" style=3D"display:block;=
+" src=3D"http://www.etsy.com/images/email/email_spacer.gif" height=3D"22" w=
+idth=3D"1">        </td>=0A        <td>=0A                =0A=0A<img border=
+=3D"0" style=3D"display:block;" src=3D"http://www.etsy.com/images/email/ema=
+il_spacer.gif" height=3D"22" width=3D"1">        </td>=0A    </tr>=0A</tbod=
+y></table>                    </td>=0A                </tr>=0A            <=
+/tbody></table>=0A        </td>=0A        <td width=3D"10" id=3D"yiv1235525=
+734frame-right">=0A            =0A    =0A<img border=3D"0" style=3D"display=
+:block;" src=3D"http://www.etsy.com/images/email/email_spacer.gif" height=
+=3D"1" width=3D"10">        </td>=0A    </tr>=0A</tbody></table>=0A</div>=
+=0A</div><br><br></div> </div> </div>  </div></body></html>
+---904242613-305248214-1368538467=:64810--

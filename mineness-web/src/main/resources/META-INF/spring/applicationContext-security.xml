@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2012. Purple Door Systems, BV.
+  -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+       http://www.springframework.org/schema/security
+       http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+    <!-- spring security for the domain layer -->
+    <security:global-method-security secured-annotations="enabled"
+                                     jsr250-annotations="enabled"
+                                     pre-post-annotations="enabled">
+        <!--<security:expression-handler ref="expressionHandler"/>-->
+    </security:global-method-security>
+
+    <!-- spring security for the web layer -->
+    <security:http auto-config="false" use-expressions="true" realm="Lela Secure Realm" disable-url-rewriting="true">
+
+        <!-- TODO When we go live the channels should be set to HTTPS -->
+        <!-- admins are only allowed to log in from localhost -->
+        <security:intercept-url pattern="/administration/**" access="hasRole('RIGHT_LOGIN_ADMIN')" requires-channel="any"/>
+        <!--<security:intercept-url pattern="/administration/**" access="hasRole('ROLE_SUPER_ADMINISTRATOR') and hasIpAddress('localhost')" requires-channel="any"/>-->
+        <security:intercept-url pattern="/user/**" access="hasRole('RIGHT_LOGIN_USER')" requires-channel="any"/>
+        <security:intercept-url pattern="/oauth/token" access="isAnonymous()" />
+        <security:intercept-url pattern="/oauth/authorize" access="isAnonymous()" />
+        <security:intercept-url pattern="/oauth/**" access="hasAnyRole('RIGHT_LOGIN_USER','RIGHT_LOGIN_ADMIN')" requires-channel="any"/>
+        <security:intercept-url pattern="/static/**" access="permitAll" requires-channel="any"/>
+        <security:intercept-url pattern="/onboard/**" access="hasAnyRole('RIGHT_LOGIN_ONBOARD')" requires-channel="any"/>
+
+        <security:access-denied-handler error-page="/403"/>
+
+        <security:form-login login-page="/login" authentication-failure-url="/login?success=false"
+                             always-use-default-target="false" default-target-url="/login/redirect"
+                             password-parameter="password" username-parameter="username"/>
+        <security:logout logout-success-url="/" delete-cookies="JSESSIONID"/>
+
+        <!-- this will save a cookie on the client side and the system will auto-login a user -->
+        <security:remember-me key="SPRING_SECURITY_REMEMBER_ME_COOKIE" services-ref="persistentTokenBasedRememberMeServices"/>
+
+        <security:session-management session-authentication-strategy-ref="sas"/>
+
+        <security:session-management>
+            <security:concurrency-control max-sessions="10" error-if-maximum-exceeded="true"
+                                          expired-url="/login" session-registry-ref="sessionRegistry"/>
+        </security:session-management>
+
+        <!--
+        <security:port-mappings>
+            <security:port-mapping http="8080" https="8443"/>
+        </security:port-mappings>
+        -->
+
+        <!-- all non-authenticated users will automatically receive an anonymous user -->
+        <security:anonymous/>
+    </security:http>
+
+    <!-- Automatically receives AuthenticationEvent messages -->
+    <bean id="loggerListener" class="org.springframework.security.authentication.event.LoggerListener"/>
+
+    <bean id="sas" class="org.springframework.security.web.authentication.session.ConcurrentSessionControlStrategy" c:sessionRegistry-ref="sessionRegistry">
+        <property name="maximumSessions" value="-1"/>
+    </bean>
+
+    <bean id="sessionRegistry" class="org.springframework.security.core.session.SessionRegistryImpl"/>
+
+    <security:authentication-manager alias="authenticationManager">
+        <!-- spring-security uses our custom user service implementation -->
+        <security:authentication-provider user-service-ref="userService">
+            <security:password-encoder ref="passwordEncoder"/>
+        </security:authentication-provider>
+    </security:authentication-manager>
+
+    <bean id="accessDecisionManager" class="org.springframework.security.access.vote.UnanimousBased">
+		<constructor-arg>
+			<list>
+				<bean class="org.springframework.security.access.vote.RoleVoter" />
+				<bean class="org.springframework.security.access.vote.AuthenticatedVoter" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+    <!-- custom programmatic permission evaluator -->
+    <!--
+    <bean id="expressionHandler" class="org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler">
+        <property name="permissionEvaluator">
+            <bean class="com.lela.commons.spring.security.CustomPermissionEvaluator"/>
+        </property>
+    </bean>
+    -->
+
+    <!-- remember me -->
+    <bean id="rememberMeFilter" class="org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter"
+          c:authenticationManager-ref="authenticationManager" c:rememberMeServices-ref="persistentTokenBasedRememberMeServices"/>
+
+    <bean id="rememberMeAuthenticationProvider" class="org.springframework.security.authentication.RememberMeAuthenticationProvider"
+          c:key="SPRING_SECURITY_REMEMBER_ME_COOKIE"/>
+
+    <bean id="persistentTokenBasedRememberMeServices" class="org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices"
+          c:userDetailsService-ref="userService"
+          c:tokenRepository-ref="tokenRepository"
+          c:key="SPRING_SECURITY_REMEMBER_ME_COOKIE">
+        <!-- we had to set this property to true otherwise remember-me won't get picked up when logging in through Facebook -->
+        <property name="alwaysRemember" value="true"/>
+        <!-- had to set this so that the cookie could be accessed from both https and http -->
+        <property name="useSecureCookie" value="false"/>
+        <property name="tokenValiditySeconds" value="${rememberme.token.validity.seconds}"/>
+    </bean>
+
+    <bean id='tokenRepository' class='com.mineness.spring.security.PersistentTokenRepositoryImpl'
+          c:rememberMeRepository-ref="rememberMeRepository"/>
+
+</beans>

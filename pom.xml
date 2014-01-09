@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.mineness</groupId>
+    <artifactId>mineness</artifactId>
+    <packaging>pom</packaging>
+    <version>0.1.0.BUILD-SNAPSHOT</version>
+    <name>MineNess</name>
+    <modules>
+        <module>mineness-web</module>
+    </modules>
+    <properties>
+        <aspectj.version>1.7.1</aspectj.version>
+        <java.version>1.7</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <roo.version>1.2.3.RELEASE</roo.version>
+        <slf4j.version>1.7.2</slf4j.version>
+        <spring.version>3.2.2.RELEASE</spring.version>
+        <jackson.version>1.9.4</jackson.version>
+        <mockito.version>1.9.0</mockito.version>
+        <jtidy.version>r938</jtidy.version>
+        <bouncycastle.version>1.48</bouncycastle.version>
+        <jasypt.version>1.9.0</jasypt.version>
+        <spring.security.version>3.1.4.RELEASE</spring.security.version>
+        <spring.mobile.version>1.0.0.RELEASE</spring.mobile.version>
+        <wurfl.version>1.4.0.1</wurfl.version>
+        <spring.social.version>1.0.2.RELEASE</spring.social.version>
+        <jug.version>3.1.0</jug.version>
+        <xmemcached.provider.version>3.1.0</xmemcached.provider.version>
+    </properties>
+    <repositories>
+        <repository>
+            <id>bearchoke</id>
+            <name>bearchoke Repository</name>
+            <url>http://bearchoke.com:8081/nexus/content/groups/public</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>bearchoke-snapshots</id>
+            <name>bearchoke Repository</name>
+            <url>http://bearchoke.com:8081/nexus/content/groups/public-snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>spring-maven-release</id>
+            <name>Spring Maven Release Repository</name>
+            <url>http://maven.springframework.org/release</url>
+        </repository>
+        <repository>
+            <id>spring-maven-milestone</id>
+            <name>Spring Maven Milestone Repository</name>
+            <url>http://maven.springframework.org/milestone</url>
+        </repository>
+        <repository>
+            <id>spring-roo-repository</id>
+            <name>Spring Roo Repository</name>
+            <url>http://spring-roo-repository.springsource.org/release</url>
+        </repository>
+        <repository>
+            <id>spring-maven-snapshot</id>
+            <url>http://maven.springframework.org/milestone</url>
+            <name>Spring Maven MILESTONE Repository</name>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>bearchoke-plugins</id>
+            <url>http://bearchoke.com:8081/nexus/content/groups/public</url>
+            <snapshots>
+                <enabled>false</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </releases>
+        </pluginRepository>
+        <pluginRepository>
+            <id>bearchoke-plugins-snapshots</id>
+            <url>http://bearchoke.com:8081/nexus/content/groups/public-snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </releases>
+        </pluginRepository>
+        <pluginRepository>
+            <id>spring-maven-release</id>
+            <name>Spring Maven Release Repository</name>
+            <url>http://maven.springframework.org/release</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>spring-maven-milestone</id>
+            <name>Spring Maven Milestone Repository</name>
+            <url>http://maven.springframework.org/milestone</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>spring-roo-repository</id>
+            <name>Spring Roo Repository</name>
+            <url>http://spring-roo-repository.springsource.org/release</url>
+        </pluginRepository>
+    </pluginRepositories>
+    <build>
+        <defaultGoal>compile</defaultGoal>
+    </build>
+</project>

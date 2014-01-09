@@ -1,0 +1,305 @@
+Delivered-To: bjorn@harvold.com
+Received: by 10.194.6.35 with SMTP id x3csp62567wjx;
+        Mon, 25 Mar 2013 11:44:11 -0700 (PDT)
+X-Received: by 10.50.170.36 with SMTP id aj4mr8562009igc.4.1364237051063;
+        Mon, 25 Mar 2013 11:44:11 -0700 (PDT)
+Return-Path: <chiafenchung@yahoo.com>
+Received: from nm36-vm6.bullet.mail.ne1.yahoo.com (nm36-vm6.bullet.mail.ne1.yahoo.com. [98.138.229.118])
+        by mx.google.com with ESMTPS id o4si25795623igj.25.2013.03.25.11.44.10
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Mon, 25 Mar 2013 11:44:11 -0700 (PDT)
+Received-SPF: pass (google.com: best guess record for domain of chiafenchung@yahoo.com designates 98.138.229.118 as permitted sender) client-ip=98.138.229.118;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: best guess record for domain of chiafenchung@yahoo.com designates 98.138.229.118 as permitted sender) smtp.mail=chiafenchung@yahoo.com;
+       dkim=pass header.i=@yahoo.com
+Received: from [98.138.226.177] by nm36.bullet.mail.ne1.yahoo.com with NNFMP; 25 Mar 2013 18:44:10 -0000
+Received: from [98.138.89.170] by tm12.bullet.mail.ne1.yahoo.com with NNFMP; 25 Mar 2013 18:44:10 -0000
+Received: from [127.0.0.1] by omp1026.mail.ne1.yahoo.com with NNFMP; 25 Mar 2013 18:44:10 -0000
+X-Yahoo-Newman-Property: ymail-3
+X-Yahoo-Newman-Id: 202415.34762.bm@omp1026.mail.ne1.yahoo.com
+Received: (qmail 59693 invoked by uid 60001); 25 Mar 2013 18:44:10 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s1024; t=1364237050; bh=V6paOx4M4oAvqnRHWbn9Lh4f2qh+xR388xEw/Brb0gc=; h=X-YMail-OSG:Received:X-Rocket-MIMEInfo:X-Mailer:References:Message-ID:Date:From:Reply-To:Subject:To:In-Reply-To:MIME-Version:Content-Type; b=zzU8RvdV/VT9VuDtNUS8knSCxHbNLbwxV0sZpQ4AWGrZJT+ClTRrdhmHcT4ao/4n49q4Fwr7IZ2COuC8Mj+ZIGXr5oDq74dY9fa+WdgBixqT+/c09GHQnwsUQ8coFWUwdTqNBk5yBZHoQQhgroDrgPJ7TEGwHLc2+uqs0gEm7SE=
+DomainKey-Signature:a=rsa-sha1; q=dns; c=nofws;
+  s=s1024; d=yahoo.com;
+  h=X-YMail-OSG:Received:X-Rocket-MIMEInfo:X-Mailer:References:Message-ID:Date:From:Reply-To:Subject:To:In-Reply-To:MIME-Version:Content-Type;
+  b=ociTxAxxbc4RwjIsmgc/aixei4fXjq5K3FhkLSenMcJkbtVNyFsK7tF7C3Gqb14JkzhPs1hj/oKbA3XW9ArDVlMzeZbjF7uL5OSzMka+5v1QFq7IUdWAYPEG20yog2PGEqtujNcKAB4KOEKFC7jA2Kkl1Jg4kgrrqsMV/IZ82SQ=;
+X-YMail-OSG: _3_bNTkVM1mppYhWfFLiGd5yF2I33E1yZs_xHaOQox1j7jM
+ aYL.el4oKzVNlEMpoo8_eX1cwVLF8vNEji7g1CnGdLINl0UQNom_fy1KwwSC
+ Gp2dl_rlyiQogmQFqLdLTZBYr3vCk2_gVOnkGnukR093lfhdtfu0ORQueHo9
+ xYkCUN5Z3qa8gayrYQS.NtThCre.4uJA.NF3MVj8n6ohsdfrWAUquQhA6Vwo
+ Ffa_61W43_OTuGFUHbVdwXohFOa4Dmw5vUBVt_BtIiWSnQV3X6Bl0R3tNWtL
+ U9Fb65ChSoUfG2y2TSEFNlVH6zxzBeYZ6lwG1lb6NsA9YNybaYq9DOOl2Ymx
+ aq05lH_L.uhIQsHCc7UmjiHC3sQdQ8umENoz5Bmmr7tfcY0YtsSKhHssQC5C
+ g1lMu6e6ymmFkMjcNN_djMlMAAxq5L3i1PDviwK41Ibg2r8XAsL4nm..0p1R
+ U3kY63NWWwxbh5kmSA_O1Y30_0FnRegFeDWP6DKd2yeBttXMzEDPqqSyq_hO
+ 97NBznjveSsDtxwgrm54jt9oR59J4w18hLr4fgI4H7dtKwnzydcXuR44lQ9J
+ Vw6COi1zKqBuL.R84ndSP3X3ojagqBYbNwvG1.IzjyoP2UYVDeBP7eOBybOQ
+ e4LQ3NYkuhrxjUHEEA3ZI.Ux1BpPUZP.0uovMKJATME8rM_yN.XEsMsWGyWL
+ IFOD86GOWDetzY8gOJUvNB7J_UGvZd5kyRYYmbMHBH0_YM9H45WzmkO8syQ-
+ -
+Received: from [207.237.255.82] by web124903.mail.ne1.yahoo.com via HTTP; Mon, 25 Mar 2013 11:44:09 PDT
+X-Rocket-MIMEInfo: 002.001,CgoKLS0tLS0gRm9yd2FyZGVkIE1lc3NhZ2UgLS0tLS0KRnJvbTogImF1dG8tY29uZmlybUBhbWF6b24uY29tIiA8YXV0by1jb25maXJtQGFtYXpvbi5jb20.ClRvOiAiY2hpYWZlbmNodW5nQHlhaG9vLmNvbSIgPGNoaWFmZW5jaHVuZ0B5YWhvby5jb20.IApTZW50OiBGcmlkYXksIE1hcmNoIDIyLCAyMDEzIDExOjAzIFBNClN1YmplY3Q6IFlvdXIgT3JkZXIgd2l0aCBBbWF6b24uY29tCiAKCllvdXIgT3JkZXIgd2l0aCBBbWF6b24uY29tIAogIMKgVklFVyBDQVJUIHwgV0lTSCBMSVNUIHwgWU9VUiBBQ0NPVU4BMAEBAQE-
+X-Mailer: YahooMailWebService/0.8.139.530
+References: <0000013d953379f9-ab0921fb-e2ee-4c82-a6e7-a9da657d87d9-000000@email.amazonses.com>
+Message-ID: <1364237049.59111.YahooMailNeo@web124903.mail.ne1.yahoo.com>
+Date: Mon, 25 Mar 2013 11:44:09 -0700 (PDT)
+From: Fanny Chung <chiafenchung@yahoo.com>
+Reply-To: Fanny Chung <chiafenchung@yahoo.com>
+Subject: Fw: Your Order with Amazon.com
+To: "bjorn@harvold.com" <bjorn@harvold.com>
+In-Reply-To: <0000013d953379f9-ab0921fb-e2ee-4c82-a6e7-a9da657d87d9-000000@email.amazonses.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="-904242613-1229938759-1364237049=:59111"
+
+
+---904242613-1229938759-1364237049=:59111
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=iso-8859-1
+
+=0A=0A=0A----- Forwarded Message -----=0AFrom: "auto-confirm@amazon.com" <a=
+uto-confirm@amazon.com>=0ATo: "chiafenchung@yahoo.com" <chiafenchung@yahoo.=
+com> =0ASent: Friday, March 22, 2013 11:03 PM=0ASubject: Your Order with Am=
+azon.com=0A =0A=0AYour Order with Amazon.com =0A  =A0VIEW CART | WISH LIST =
+| YOUR ACCOUNT | HELP  =0AThanks for your order, Fanny Chung! =0AWant to ma=
+nage your order online?=0AIf you need to check the status of your order or =
+make changes, please visit our home page at Amazon.com and click on Your Ac=
+count at the top of any page.=0A =0APurchasing Information:  =0AEmail Addre=
+ss:=A0=A0chiafenchung@yahoo.com   =0ABilling address=0AFanny Davidson=0A247=
+ W 87TH ST APT 17F=0ANEW YORK, NY 10024-2850=0AUnited States=0A=0A  Shippin=
+g Address:=0AFanny Davidson=0A247 W 87TH ST APT 17F=0ANEW YORK, NY 10024-28=
+50=0AUnited States=0A=0A   =0AOrder grand total: $16.28   =0AGet the Amazon=
+.com Rewards Visa Card and get $30 instantly as an Amazon.com Gift Card.   =
+=0AOrder Summary:  =0AShipping Details : (order will arrive in 1 shipment) =
+  =0AOrder #:   103-6835606-5995409   =0AShipping Method:   Two-Day Shippin=
+g   =0AItems: =A0    $14.95    =0AShipping & handling: =A0    $0.00    =0A=
+=A0  ------  =0ATotal before tax: =A0    $14.95    =0AEstimated tax to be c=
+ollected: =A0    $1.33    =0A=A0  ------  =0AOrder total: =A0     $16.28   =
+  =0A=0A=A0=0ADelivery estimate: Mar. 26, 2013  =0A 1 "Daily Language Revie=
+w, Grade 2"=0AEvan-Moor Educational Publishers;=0A     Paperback; $14.95=0A=
+In Stock=0A=A0=A0=0A=0A  Sold by: Amazon.com LLC     =0A=0A________________=
+________________=0A  =0A=A0  =0ANeed to print an invoice? =0A Visit www.ama=
+zon.com/your-account and click to view your orders. Click "View order" next=
+ to the appropriate order. You'll find a button to print an invoice on the =
+next page =0A =0AWhere can I get help with reviewing or changing my orders?=
+ =0ATo learn more about managing your orders on Amazon.com, please visit ou=
+r Help pages at www.amazon.com/help/orders/. =0A =0APlease note: This email=
+ message was sent from a notification-only address that cannot accept incom=
+ing email. Please do not reply to this message.  =0AIf you ever need to ret=
+urn an order, visit our Online Returns Center: www.amazon.com/returns  =0AT=
+hanks again for shopping with us.  =0AAmazon.com =0AEarth's Biggest Selecti=
+on   =0A=A0 Prefer not to receive HTML mail? Click here     
+---904242613-1229938759-1364237049=:59111
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=iso-8859-1
+
+<html><body><div style=3D"color:#000; background-color:#fff; font-family:ti=
+mes new roman, new york, times, serif;font-size:12pt"><div><span></span></d=
+iv><div><br></div>  <div style=3D"font-family: 'times new roman', 'new york=
+', times, serif; font-size: 12pt;"> <div style=3D"font-family: 'times new r=
+oman', 'new york', times, serif; font-size: 12pt;"> <div dir=3D"ltr"> <font=
+ size=3D"2" face=3D"Arial"> ----- Forwarded Message -----<br>  <b><span sty=
+le=3D"font-weight:bold;">From:</span></b> "auto-confirm@amazon.com" &lt;aut=
+o-confirm@amazon.com&gt;<br> <b><span style=3D"font-weight: bold;">To:</spa=
+n></b> "chiafenchung@yahoo.com" &lt;chiafenchung@yahoo.com&gt; <br> <b><spa=
+n style=3D"font-weight: bold;">Sent:</span></b> Friday, March 22, 2013 11:0=
+3 PM<br> <b><span style=3D"font-weight: bold;">Subject:</span></b> Your Ord=
+er with Amazon.com<br> </font> </div> <br>=0A<div id=3D"yiv848800897">=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A    <title>Your Or=
+der with Amazon.com</title>=0A=0A<div>=0A  =0A=0A=0A<table border=3D"0" wid=
+th=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=0A  <tbody><tr bgcolor=3D"=
+#FFFFFF">=0A    <td align=3D"left">=0A      =0A=0A<a rel=3D"nofollow" targe=
+t=3D"_blank" href=3D"http://www.amazon.com/"><img src=3D"https://images-na.=
+ssl-images-amazon.com/images/G/01/x-locale/common/amazon-logo._V192256676_.=
+gif" width=3D"140" alt=3D"Amazon.com" height=3D"30" border=3D"0"></a>=0A   =
+ </td>=0A    <td align=3D"right" class=3D"yiv848800897topnav_header" style=
+=3D"font-size:12px;text-decoration:none;color:black;"><b>=0A      <a rel=3D=
+"nofollow" target=3D"_blank" href=3D"http://www.amazon.com/gp/cart/view.htm=
+l/ref=3Dcs_ae_cart"><img src=3D"https://images-na.ssl-images-amazon.com/ima=
+ges/G/01/x-locale/common/icons/topnav-cart._V192239683_.gif" width=3D"19" a=
+lt=3D"VIEW CART" height=3D"16" border=3D"0">&nbsp;VIEW CART</a>=0A    |=0A =
+     <a rel=3D"nofollow" target=3D"_blank" href=3D"http://www.amazon.com/gp=
+/registry/wishlist/ref=3Dcs_ae_wl">WISH LIST</a>=0A    | =0A      <a rel=3D=
+"nofollow" target=3D"_blank" href=3D"http://www.amazon.com/gp/css/homepage.=
+html/ref=3Dcs_ae_yr">YOUR ACCOUNT</a>=0A    |=0A      <a rel=3D"nofollow" t=
+arget=3D"_blank" href=3D"http://www.amazon.com/gp/help/customer/display.htm=
+l/ref=3Dcs_nav_top_hlp">HELP</a>=0A    </b></td>=0A  </tr>=0A</tbody></tabl=
+e>=0A=0A=0A=0A=0A=0A<table width=3D"90%" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"1" align=3D"center" bgcolor=3D"#006699">=0A  <tbody><tr>=0A    =
+<td>=0A      <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"5" align=3D"center">=0A        <tbody><tr valign=3D"top">=0A         =
+ <td bgcolor=3D"#FFFFFF">=0A            <font face=3D"verdana,arial,helveti=
+ca" size=3D"-1">=0A              <div><b>=0A=0A                Thanks for y=
+our order, Fanny Chung!=0A              </b></div>=0A=0A=0A              <d=
+iv><b>Want to manage your order online?</b><br>=0A               =0AIf you =
+need to check the status of your order or make changes, please visit our ho=
+me page at Amazon.com and click on Your Account at the top of any page.<br>=
+=0A              </div>=0A            </font>=0A            <table cellpadd=
+ing=3D"4" cellspacing=3D"0" border=3D"0" width=3D"100%">=0A              <t=
+body><tr>=0A=09        <td colspan=3D"2" bgcolor=3D"#006699">=0A=09        =
+  <font color=3D"#ffffff" face=3D"verdana,arial,helvetica" size=3D"-1"><b>P=
+urchasing Information:</b></font>=0A=09              </td>=0A              =
+  </tr>=0A              <tr>=0A=09        <td colspan=3D"2">=0A            =
+      <font face=3D"verdana,arial,helvetica" size=3D"-1">=0A               =
+     <b>Email Address:</b>&nbsp;&nbsp;chiafenchung@yahoo.com=0A=09         =
+ </font>=0A=09        </td>=0A              </tr>=0A              <tr>=0A=
+=09        <td colspan=3D"2">=0A=09          <table width=3D"100%" cellspac=
+ing=3D"0" cellpadding=3D"0">=0A=09            <tbody><tr>=0A=09            =
+  <td valign=3D"top" width=3D"50%" style=3D"padding-right:1em;">=0A        =
+                <font face=3D"verdana,arial,helvetica" size=3D"-1">=0A=09=
+=09          <b>Billing address</b><br>=0A                            Fanny=
+ Davidson<br>247 W 87TH ST APT 17F<br>NEW YORK, NY 10024-2850<br>United Sta=
+tes<br><br>=0A=09=09         </font>=0A=09               </td>=0A          =
+             <td valign=3D"top" width=3D"50%"> =0A                         =
+<font face=3D"verdana,arial,helvetica" size=3D"-1">=0A                     =
+    <b>Shipping Address:</b><br>=0A                        Fanny Davidson<b=
+r>247 W 87TH ST APT 17F<br>NEW YORK, NY 10024-2850<br>United States<br><br>=
+=0A=09=09          </font>=0A=09                </td>=0A=09              </=
+tr>=0A=09            </tbody></table>=0A=09          </td>=0A              =
+</tr>=0A              <tr>=0A=09        <td colspan=3D"2">=0A              =
+    <font face=3D"verdana,arial,helvetica" size=3D"-1">=0A=09            <b=
+>Order grand total: $16.28</b>=0A=09          </font>=0A=09          </td>=
+=0A              </tr>=0A=0A              <tr>=0A=09        <td colspan=3D"=
+2">=0A                  <font face=3D"verdana,arial,helvetica" size=3D"-1">=
+=0A                    Get the <b><a rel=3D"nofollow" target=3D"_blank" hre=
+f=3D"http://www.amazon.com/InstantRewards?_encoding=3DUTF8&amp;ref_=3Dpe_12=
+0430_17456570">Amazon.com Rewards Visa Card</a></b> and get <b>$30 instantl=
+y</b> as an Amazon.com Gift Card.=0A=09          </font>=0A=09        </td>=
+=0A=09      </tr>=0A=0A=0A=0A              <tr>=0A                <td colsp=
+an=3D"2" bgcolor=3D"#006699">=0A                  <font color=3D"#ffffff" f=
+ace=3D"verdana,arial,helvetica" size=3D"-1"><b>Order Summary:</b></font>=0A=
+                </td>=0A              </tr>=0A=0A=0A=0A=0A              <tr=
+>=0A                <td bgcolor=3D"#EEEEEE">=0A=0A=0A                  <fon=
+t face=3D"verdana,arial,helvetica" size=3D"-1" color=3D"#CC6600"><b>=0A=0A =
+                     Shipping Details=0A                      : (order will=
+ arrive in 1 shipment)=0A=0A                  </b></font>=0A=0A            =
+    </td>=0A              </tr>=0A              <tr>=0A                <td>=
+=0A                  <table border=3D"0" cellpadding=3D"1" cellspacing=3D"0=
+" width=3D"100%">=0A=0A=0A=0A                            <tbody><tr>=0A    =
+                            <td nowrap=3D"">=0A                            =
+      <font face=3D"verdana,arial,helvetica" size=3D"-1">=0A               =
+                     <b>Order #:</b>=0A                                   <=
+/font>=0A                                </td>=0A                          =
+      <td width=3D"98%">=0A                                  <font face=3D"=
+verdana,arial,helvetica" size=3D"-1">=0A                                   =
+ <a rel=3D"nofollow" target=3D"_blank" href=3D"https://www.amazon.com/gp/cs=
+s/order-history/ref=3Dox_oce_order_history">103-6835606-5995409</a>=0A     =
+                             </font>=0A                                </td=
+>=0A                            </tr>=0A                            <tr>=0A=
+                                <td nowrap=3D"">=0A                        =
+        <font face=3D"verdana,arial,helvetica" size=3D"-1">=0A             =
+                       <b>Shipping Method:</b>=0A                          =
+      </font>=0A                                </td>=0A                   =
+             <td width=3D"98%">=0A                                  <font f=
+ace=3D"verdana,arial,helvetica" size=3D"-1">=0A                            =
+        Two-Day Shipping=0A                                  </font>=0A    =
+                            </td>=0A                            </tr>=0A=0A=
+                            =0A=0A        <tr>=0A          <td nowrap=3D"">=
+=0A            <span class=3D"yiv848800897small"> =0A              <font fa=
+ce=3D"verdana,arial,helvetica" size=3D"-1">=0A                Items: &nbsp;=
+=0A              </font>=0A            </span>=0A          </td>=0A        =
+  <td>=0A            <span class=3D"yiv848800897small">=0A              <fo=
+nt face=3D"verdana,arial,helvetica" size=3D"-1">=0A                $14.95 =
+=0A              </font>=0A            </span>=0A          </td>=0A        =
+</tr>=0A        <tr>=0A          <td nowrap=3D"">=0A            <span class=
+=3D"yiv848800897small"> =0A              <font face=3D"verdana,arial,helvet=
+ica" size=3D"-1">=0A                Shipping &amp; handling: &nbsp;=0A     =
+         </font>=0A            </span>=0A          </td>=0A          <td>=
+=0A            <span class=3D"yiv848800897small">=0A              <font fac=
+e=3D"verdana,arial,helvetica" size=3D"-1">=0A                $0.00 =0A     =
+         </font>=0A            </span>=0A          </td>=0A        </tr>=0A=
+        <tr>=0A          <td>=0A            &nbsp;=0A          </td>=0A    =
+      <td>=0A            ------=0A          </td>=0A        </tr>=0A       =
+ <tr>=0A          <td nowrap=3D"">=0A            <span class=3D"yiv84880089=
+7small"> =0A              <font face=3D"verdana,arial,helvetica" size=3D"-1=
+">=0A                Total before tax: &nbsp;=0A              </font>=0A   =
+         </span>=0A          </td>=0A          <td>=0A            <span cla=
+ss=3D"yiv848800897small">=0A              <font face=3D"verdana,arial,helve=
+tica" size=3D"-1">=0A                $14.95 =0A              </font>=0A    =
+        </span>=0A          </td>=0A        </tr>=0A        <tr>=0A        =
+  <td nowrap=3D"">=0A            <span class=3D"yiv848800897small"> =0A    =
+          <font face=3D"verdana,arial,helvetica" size=3D"-1">=0A           =
+     Estimated tax to be collected: &nbsp;=0A              </font>=0A      =
+      </span>=0A          </td>=0A          <td>=0A            <span class=
+=3D"yiv848800897small">=0A              <font face=3D"verdana,arial,helveti=
+ca" size=3D"-1">=0A                $1.33 =0A              </font>=0A       =
+     </span>=0A          </td>=0A        </tr>=0A        <tr>=0A          <=
+td>=0A            &nbsp;=0A          </td>=0A          <td>=0A            -=
+-----=0A          </td>=0A        </tr>=0A        <tr>=0A          <td nowr=
+ap=3D"">=0A            <span class=3D"yiv848800897small">=0A              <=
+font face=3D"verdana,arial,helvetica" size=3D"-1">=0A                <b> =
+=0A                  Order total: &nbsp;=0A                </b>=0A         =
+     </font>=0A            </span>=0A          </td>=0A          <td>=0A   =
+         <span class=3D"yiv848800897small">=0A              <font face=3D"v=
+erdana,arial,helvetica" size=3D"-1">=0A                <b> =0A             =
+     $16.28 =0A                </b>=0A              </font>=0A            <=
+/span>=0A          </td>=0A        </tr>=0A=0A=0A=0A=0A=0A=0A              =
+              <tr>=0A                                <td colspan=3D"2">=0A =
+                                 <font face=3D"verdana,arial,helvetica" siz=
+e=3D"-1">=0A                                  <br>&nbsp;<br>=0A=0A=0A    =
+=0A=0A=0A=0A=0A=0A=0A=0A=0A                  <b>Delivery estimate: </b>Mar.=
+ 26, 2013=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A                     =
+             </font>=0A                                  <table>=0A=0A     =
+                               <tbody><tr valign=3D"top">=0A               =
+                         <td>=0A                                        </t=
+d>=0A                                        <td><font face=3D"verdana,aria=
+l,helvetica" size=3D"-1"><b>1</b></font></td>=0A=0A=0A<td>=0A<font face=3D"=
+verdana,arial,helvetica" size=3D"-1">=0A  <b>"Daily Language Review, Grade =
+2"</b><br>=0A     Evan-Moor Educational Publishers;=0A     Paperback;=0A=0A=
+=0A    <span class=3D"yiv848800897price">$14.95</span><br>=0A=0A=0A=0A     =
+In Stock<br>&nbsp;&nbsp;=0A=0A  Sold by: <a rel=3D"nofollow" target=3D"_bla=
+nk" href=3D"http://www.amazon.com/gp/help/seller/home.html/ref=3Dox_oce_sel=
+ler_home?ie=3DUTF8&amp;seller=3DATVPDKIKX0DER">Amazon.com LLC</a>=0A=0A=0A=
+=0A</font>=0A</td>=0A=0A=0A                                     </tr>=0A=0A=
+=0A=0A                                </tbody></table>=0A                  =
+              =0A=0A=0A                                </td>=0A            =
+                </tr>=0A=0A=0A=0A                  </tbody></table>=0A=09  =
+            </td>=0A              </tr>=0A=0A=0A=0A                <tr>=0A=
+=09=09  <td>=0A=09           <hr noshade=3D"" size=3D"1">=0A=0A      <a rel=
+=3D"nofollow" target=3D"_blank" href=3D"https://www.amazon.com/gp/gc/ref=3D=
+gc_orderconfirm_email_hol"><img src=3D"https://images-na.ssl-images-amazon.=
+com/images/G/01/gift-certificates/consumer/ordering-confirm-email-gc-banner=
+-ad._V374466038_.gif" width=3D"643" alt=3D"Amazon.com Gift Cards" height=3D=
+"90" border=3D"0"></a>=0A=0A=0A=0A=0A=0A    <div>=0A    <font face=3D"verda=
+na,arial,helvetica" size=3D"-1">=0A &nbsp;=0A    </font>=0A</div>=0A=0A<div=
+>=0A<font face=3D"verdana,arial,helvetica" size=3D"-1">=0A   <b>=0A      Ne=
+ed to print an invoice? <br>=0A   </b>=0A   =0AVisit <a target=3D"_blank" h=
+ref=3D"http://www.amazon.com/your-account">www.amazon.com/your-account</a> =
+and click to view your orders. Click "View order" next to the appropriate o=
+rder. You'll find a button to print an invoice on the next page <br>=0A</fo=
+nt>=0A</div>=0A=0A=0A=0A<div> <font face=3D"verdana,arial,helvetica" size=
+=3D"-1"><b>Where can I get help with reviewing or changing my orders?</b> <=
+br>=0A=0ATo learn more about managing your orders on Amazon.com, please vis=
+it our Help pages at <a target=3D"_blank" href=3D"http://www.amazon.com/hel=
+p/orders/">www.amazon.com/help/orders/</a>. <br></font> </div>=0A=0A=0A    =
+<div>=0A    <font face=3D"verdana,arial,helvetica" size=3D"-1">=0A       Pl=
+ease note: This email message was sent from a notification-only address tha=
+t cannot accept incoming email. Please do not reply to this message.=0A    =
+</font>=0A    </div>=0A=0A       <div>=0A       <font face=3D"verdana,arial=
+,helvetica" size=3D"-1">=0A         =0AIf you ever need to return an order,=
+ visit our Online Returns Center: <a target=3D"_blank" href=3D"http://www.a=
+mazon.com/returns">www.amazon.com/returns</a>=0A       </font>=0A       </d=
+iv>=0A    <div>=0A    <font face=3D"verdana,arial,helvetica" size=3D"-1">=
+=0A       Thanks again for shopping with us.=0A    </font>=0A     </div>=0A=
+    <div>=0A    <font face=3D"verdana,arial,helvetica" size=3D"-1">=0A     =
+ <b>=0A=09=0A<a rel=3D"nofollow" target=3D"_blank" href=3D"http://www.amazo=
+n.com/ref=3Dox_oce_homepage">Amazon.com</a></b>=0A=0A      <br><b>=0A  =0AE=
+arth's Biggest Selection=0A      </b>=0A    </font>=0A    </div>=0A=0A=0A=
+=0A=0A    <div>=0A    <font face=3D"verdana,arial,helvetica" size=3D"-1">=
+=0A      <img src=3D"https://images-na.ssl-images-amazon.com/images/G/01/x-=
+locale/common/icons/icon-unsubscribe._V192239991_.gif" width=3D"17" height=
+=3D"15" border=3D"0">&nbsp;=0A      Prefer not to receive HTML mail?=0A=0A=
+=0A  <a rel=3D"nofollow" target=3D"_blank" href=3D"https://www.amazon.com/g=
+p/gss/ccp/ref=3Dox_oce_email_preference">Click here</a>=0A  </font>=0A     =
+ </div>=0A=09=09=09  </td>=0A=09=09=09</tr>=0A=09=09      </tbody></table>=
+=0A </td>=0A                   </tr>=0A                </tbody></table>=0A =
+             </td>=0A             </tr>=0A         </tbody></table>=0A</div=
+>=0A=0A</div><br><br> </div> </div>  </div></body></html>
+---904242613-1229938759-1364237049=:59111--

@@ -1,0 +1,336 @@
+Delivered-To: bjorn@harvold.com
+Received: by 10.194.6.35 with SMTP id x3csp62803wjx;
+        Mon, 25 Mar 2013 11:49:50 -0700 (PDT)
+X-Received: by 10.50.53.180 with SMTP id c20mr12522298igp.15.1364237389437;
+        Mon, 25 Mar 2013 11:49:49 -0700 (PDT)
+Return-Path: <chiafenchung@yahoo.com>
+Received: from nm34-vm5.bullet.mail.ne1.yahoo.com (nm34-vm5.bullet.mail.ne1.yahoo.com. [98.138.229.85])
+        by mx.google.com with ESMTPS id fv4si33655187igc.0.2013.03.25.11.49.48
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Mon, 25 Mar 2013 11:49:49 -0700 (PDT)
+Received-SPF: pass (google.com: best guess record for domain of chiafenchung@yahoo.com designates 98.138.229.85 as permitted sender) client-ip=98.138.229.85;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: best guess record for domain of chiafenchung@yahoo.com designates 98.138.229.85 as permitted sender) smtp.mail=chiafenchung@yahoo.com;
+       dkim=pass header.i=@yahoo.com
+Received: from [98.138.226.177] by nm34.bullet.mail.ne1.yahoo.com with NNFMP; 25 Mar 2013 18:49:48 -0000
+Received: from [98.138.89.194] by tm12.bullet.mail.ne1.yahoo.com with NNFMP; 25 Mar 2013 18:49:48 -0000
+Received: from [127.0.0.1] by omp1052.mail.ne1.yahoo.com with NNFMP; 25 Mar 2013 18:49:48 -0000
+X-Yahoo-Newman-Property: ymail-3
+X-Yahoo-Newman-Id: 582517.97546.bm@omp1052.mail.ne1.yahoo.com
+Received: (qmail 84749 invoked by uid 60001); 25 Mar 2013 18:49:48 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s1024; t=1364237388; bh=5/Xn3JV8xrPuOnVyObW0N818Pe0Xxt9FZRxUDJO9bRw=; h=X-YMail-OSG:Received:X-Rocket-MIMEInfo:X-Mailer:References:Message-ID:Date:From:Reply-To:Subject:To:In-Reply-To:MIME-Version:Content-Type; b=dM3pujuh0pseKfvdoYQU5zhHXpcECqsHcI4jfJ8Pl9OyI+Fk85UlXKZNB5VwvcHXODCVQ0eVfB/8n4K3NhM4XBqe4b27CkgOCVtH3bGLk37sINx8Ynp/VWXagjtMiwQSJ1Kn5BYjc8miZ5vUk/lX2PjGO2yovI1z6vdKpuZdHpg=
+DomainKey-Signature:a=rsa-sha1; q=dns; c=nofws;
+  s=s1024; d=yahoo.com;
+  h=X-YMail-OSG:Received:X-Rocket-MIMEInfo:X-Mailer:References:Message-ID:Date:From:Reply-To:Subject:To:In-Reply-To:MIME-Version:Content-Type;
+  b=BjIG1bdl7z921JC43MgrN/YmH/IjWEoqGexi/MSYDyLGipQwCCZJOltUFeEhDY1N2rNRMujc8/UZzQzsiXOY0QjFNZYaffBShIDbugzIyRVsiisXNu6OC++kX39gMTlbi9nvNq7qLnpku6zGSSiYCbVmfzmSX+ZloG7BBDv3g/c=;
+X-YMail-OSG: zw.nSYMVM1lmIijGZNgYv7Td5OT1rCzUs07Di1HgVs2ElXe
+ x1W67u_GFt.ff4qUMw7Ra.17NJjZiV_fnv.HQqWwNYN4Gf3S_2moA_facJV6
+ PiGpdtzdWXlPkTJImGcDGc.KVjhCYGC_qOsQGZ8ztcE6Obrmx6E8UGNddyIX
+ CK5EoY_thqrFUHmFlmvf3EOPAjPr9q1gkEYnEL33izZNLSLtJNEGaEmw9ukl
+ cAcAypKfkGiHqFpHBusWVE06xhW2katLrmO7An5vUxk_FsoxuYaXdcSDikYm
+ R_ogSp6liU8ifwcYl5sMRTGHmq5ywih9H0hyH9DUmLLIhLIJXU0yEaEm4iAA
+ PYmoKCuc0WrRYsTvYYB6oXAJEjCLu_ALUSUdabzBekwU4NT0mUX1KT8iKHwF
+ QBgtCRPcSRoYfJ9M8znpzlu3R.gpfadnowmNJZ3SeeiPFNi9VY9dpb9w.bmm
+ y4_Pib.Pg7Uu1sh0QxAxYYX1ltKr6fgRqve_1gkL8k6nvjXhAje3nPPLK4Y3
+ kMbYjCkjwN82a2T8rGzMvuguBkwvts_luX1qVg31k7EExueEec7xAA4cLkoJ
+ 9zl2QHXgnMlYcFTwWdbehj3OFB9.tFyu2U.KUGLaY7m_Jrt8o7lzdglqOR8f
+ Bv7vXOkIWE94fU3PLaV0Zw44VZIsXxxvPWFNALX8Iul2pPD4Hyp0HZu9viW2
+ 4i.Xbeg0S5zw1uBTfPGnvT1O9TRuEdzAdwDLBmpVB6fsOmYfr2CUBW45_vVm
+ U9IARDCaMOjAz_649LGVJ0RN0vHIaNOotHn_26gpRUc6U7lk5DHJbQwQhNud
+ UrVpdBruo3inhmx2jqhxbGtuTeWI-
+Received: from [207.237.255.82] by web124902.mail.ne1.yahoo.com via HTTP; Mon, 25 Mar 2013 11:49:48 PDT
+X-Rocket-MIMEInfo: 002.001,CgoKLS0tLS0gRm9yd2FyZGVkIE1lc3NhZ2UgLS0tLS0KRnJvbTogQW1hem9uLmNvbSA8c2hpcC1jb25maXJtQGFtYXpvbi5jb20.ClRvOiAiY2hpYWZlbmNodW5nQHlhaG9vLmNvbSIgPGNoaWFmZW5jaHVuZ0B5YWhvby5jb20.IApTZW50OiBGcmlkYXksIE5vdmVtYmVyIDIsIDIwMTIgMjoyMCBBTQpTdWJqZWN0OiBZb3VyIEFtYXpvbi5jb20gb3JkZXIgb2YgIk9ya2EgMTItSW5jaCBTdGFpbmxlc3MgYW5kLi4uIiBoYXMgc2hpcHBlZCEKIAoKIAogIENvdW50ZG93biB0byBCbGFjayBGcmlkYXkgIMKgfMKgICABMAEBAQE-
+X-Mailer: YahooMailWebService/0.8.139.530
+References: <0000013abfc6dafa-59db3795-20f6-4ef2-8acf-ba3f7d14dd0b-000000@email.amazonses.com>
+Message-ID: <1364237388.70556.YahooMailNeo@web124902.mail.ne1.yahoo.com>
+Date: Mon, 25 Mar 2013 11:49:48 -0700 (PDT)
+From: Fanny Chung <chiafenchung@yahoo.com>
+Reply-To: Fanny Chung <chiafenchung@yahoo.com>
+Subject: Fw: Your Amazon.com order of "Orka 12-Inch Stainless and..." has shipped!
+To: "bjorn@harvold.com" <bjorn@harvold.com>
+In-Reply-To: <0000013abfc6dafa-59db3795-20f6-4ef2-8acf-ba3f7d14dd0b-000000@email.amazonses.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="-61840014-70627555-1364237388=:70556"
+
+
+---61840014-70627555-1364237388=:70556
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=iso-8859-1
+
+=0A=0A=0A----- Forwarded Message -----=0AFrom: Amazon.com <ship-confirm@ama=
+zon.com>=0ATo: "chiafenchung@yahoo.com" <chiafenchung@yahoo.com> =0ASent: F=
+riday, November 2, 2012 2:20 AM=0ASubject: Your Amazon.com order of "Orka 1=
+2-Inch Stainless and..." has shipped!=0A =0A=0A =0A  Countdown to Black Fri=
+day  =A0|=A0   Your Orders  =A0|=A0  Amazon.com   =0AShipping Confirmation =
+ =0AOrder #002-8092475-6889803    =0AHello Fanny Chung,=0AThank you for sho=
+pping with us. We thought you'd like to know that we shipped your item, and=
+ that this completes your order. Your order is on its way, and can no longe=
+r be changed. If you need to return an item from this shipment or manage ot=
+her orders, please visit Your Orders on Amazon.com.  =0AYour estimated deli=
+very date is: =0A=0AMonday, November 5, 2012   =0A Your order was sent to:=
+=0A=0AFanny Davidson =0A247 W 87TH ST APT 17F =0ANEW YORK, NY 10024-2850 =
+=0AUnited States   =0AYour package is being shipped by UPS and the tracking=
+ number is 1Z21F31F0301220871. Depending on the ship speed you chose, it ma=
+y take 24 hours for your tracking number to return any information.   =0ASh=
+ipment Details  =0A   Orka 12-Inch Stainless and Silicone Tongs  =0ASold by=
+ Amazon.com LLC (Amazon.com)   $9.00  =0A=A0  =0AItem Subtotal:  $9.00  =0A=
+Shipping & Handling:  $0.00  =0ATotal Before Tax:  $9.00  =0ASales Tax Coll=
+ected:  $0.80  =0AShipment Total:  $9.80   =0APaid by Visa:  $9.80   =0ARet=
+urns are easy. Visit our Online Return Center. =0AIf you need further assis=
+tance with your order, please visit Customer Service.  =0AWe hope to see yo=
+u again soon!=0AAmazon.com          =0AThis email was sent from a notificat=
+ion-only address that cannot accept incoming email. Please do not reply to =
+this message. 
+---61840014-70627555-1364237388=:70556
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=iso-8859-1
+
+<html><body><div style=3D"color:#000; background-color:#fff; font-family:ti=
+mes new roman, new york, times, serif;font-size:12pt"><div><span></span></d=
+iv><div><br></div>  <div style=3D"font-family: 'times new roman', 'new york=
+', times, serif; font-size: 12pt;"> <div style=3D"font-family: 'times new r=
+oman', 'new york', times, serif; font-size: 12pt;"> <div dir=3D"ltr"> <font=
+ size=3D"2" face=3D"Arial"> ----- Forwarded Message -----<br>  <b><span sty=
+le=3D"font-weight:bold;">From:</span></b> Amazon.com &lt;ship-confirm@amazo=
+n.com&gt;<br> <b><span style=3D"font-weight: bold;">To:</span></b> "chiafen=
+chung@yahoo.com" &lt;chiafenchung@yahoo.com&gt; <br> <b><span style=3D"font=
+-weight: bold;">Sent:</span></b> Friday, November 2, 2012 2:20 AM<br> <b><s=
+pan style=3D"font-weight: bold;">Subject:</span></b> Your Amazon.com order =
+of "Orka 12-Inch Stainless and..." has shipped!<br> </font> </div> <br>=0A<=
+div id=3D"yiv1635934963">=0A  =0A   =0A  <title></title> =0A  =0A <div> =0A=
+  <table width=3D"640" cellspacing=3D"0" style=3D"font-style: normal; font-=
+variant: normal; font-weight: normal; font-size: 12px; line-height: 16px; f=
+ont-family: Arial, sans-serif; color: rgb(51, 51, 51); background-color: rg=
+b(255, 255, 255); margin: 0px auto;" id=3D"yiv1635934963container" cellpadd=
+ing=3D"0"> =0A   <tbody> =0A    <tr> =0A     <td valign=3D"top" style=3D"pa=
+dding:20px 0px 10px 20px;width:100px;border-collapse:collapse;" id=3D"yiv16=
+35934963topNav"> <a rel=3D"nofollow" target=3D"_blank" href=3D"https://www.=
+amazon.com/ref=3Dpe_175190_21431760_M3T1_SC_g_i" title=3D"Visit Amazon.com"=
+><img alt=3D"Amazon" border=3D"0" height=3D"31" id=3D"yiv1635934963amazonLo=
+go" src=3D"http://g-ecx.images-amazon.com/images/G/01/x-locale/cs/te/logo-p=
+rime.png" style=3D"font-size:11px;" width=3D"107"></a> </td> =0A     <td st=
+yle=3D"text-align:right;padding:0px 20px;"> =0A      <table cellspacing=3D"=
+0" style=3D"font-style: normal; font-variant: normal; font-weight: normal; =
+font-size: 12px; line-height: 16px; font-family: Arial, sans-serif; color: =
+rgb(51, 51, 51); margin: 0px auto; border-collapse: collapse;" id=3D"yiv163=
+5934963marketingContent" cellpadding=3D"0"> =0A       <tbody> =0A        <t=
+r> =0A         <td style=3D"border-bottom:1px solid rgb(204, 204, 204);widt=
+h:490px;" class=3D"yiv1635934963topHeaderLinks"> =0A          <table align=
+=3D"right" style=3D"font-style: normal; font-variant: normal; font-weight: =
+normal; font-size: 12px; line-height: 16px; font-family: Arial, sans-serif;=
+ color: rgb(51, 51, 51);"> =0A           <tbody> =0A            <tr style=
+=3D"padding:5px 0px 5px 0px;white-space:nowrap;border-collapse:collapse;tex=
+t-align:right;width:490px;"> =0A             <td> =0A              <div cla=
+ss=3D"yiv1635934963unified_widget yiv1635934963rcmBody">=0A               <=
+a rel=3D"nofollow" target=3D"_blank" href=3D"http://www.amazon.com/gp/redir=
+ect.html/ref=3Dpe_175190_21431760_M3T1_SWM_Black/187-6271997-4560523?_encod=
+ing=3DUTF8&amp;location=3Dhttp%3A%2F%2Fwww.amazon.com%2Fb%3Fnode%3D38408201=
+1&amp;token=3D3A0F170E7CEFE27BDC730D3D7344512BC1296B83&amp;pf_rd_m=3DATVPDK=
+IKX0DER&amp;pf_rd_s=3Demail-center-1&amp;pf_rd_r=3D1HKPZ0RJYC16J7S3TG3E&amp=
+;pf_rd_t=3D401&amp;pf_rd_p=3D1408025902&amp;pf_rd_i=3Dcontentsymphonyslot" =
+style=3D"text-decoration: none; color: rgb(0, 102, 153); font-family: Arial=
+, san-serif;">Countdown to Black Friday</a>=0A               <div class=3D"=
+yiv1635934963h_rule"></div>=0A              </div> </td> =0A             <t=
+d> <span style=3D"text-decoration: none; color: rgb(204, 204, 204); font-st=
+yle: normal; font-variant: normal; font-weight: normal; font-size: 15px; li=
+ne-height: normal; font-family: Arial, san-serif;">&nbsp;|&nbsp; </span> </=
+td> =0A             <td> <a rel=3D"nofollow" target=3D"_blank" href=3D"http=
+s://www.amazon.com/gp/css/history/orders/view.html/ref=3Dpe_175190_21431760=
+_M3T1_SC_oh_tn" style=3D"text-decoration: none; color: rgb(0, 102, 153); fo=
+nt-family: Arial, san-serif;">Your Orders</a> </td> =0A             <td> <s=
+pan style=3D"text-decoration: none; color: rgb(204, 204, 204); font-style: =
+normal; font-variant: normal; font-weight: normal; font-size: 15px; line-he=
+ight: normal; font-family: Arial, san-serif;">&nbsp;|&nbsp;</span> </td> =
+=0A             <td> <a rel=3D"nofollow" target=3D"_blank" href=3D"https://=
+www.amazon.com/ref=3Dpe_175190_21431760_M3T1_SC_g_tn" style=3D"text-decorat=
+ion: none; color: rgb(0, 102, 153); font-family: Arial, san-serif;"> Amazon=
+.com</a> </td> =0A            </tr> =0A           </tbody> =0A          </t=
+able> </td> =0A        </tr> =0A        <tr> =0A         <td style=3D"paddi=
+ng:7px 0px 0px 20px;text-align:right;width:490px;"> <span style=3D"font-sty=
+le: normal; font-variant: normal; font-weight: normal; font-size: 20px; lin=
+e-height: normal; font-family: Arial, san-serif;">Shipping Confirmation</sp=
+an> </td> =0A        </tr> =0A        <tr> =0A         <td style=3D"padding=
+:0px 0px 5px 20px;text-align:right;width:490px;"> <span style=3D"font-size:=
+12px;"> Order #<a rel=3D"nofollow" target=3D"_blank" href=3D"https://www.am=
+azon.com/gp/css/summary/edit.html/ref=3Dpe_175190_21431760_M3T1_SC_od_tn?ie=
+=3DUTF8&amp;orderID=3D002-8092475-6889803" style=3D"text-decoration:none;co=
+lor:#006699;">002-8092475-6889803</a> </span> </td> =0A        </tr> =0A   =
+    </tbody> =0A      </table> </td> =0A    </tr> =0A    <tr> =0A     <td c=
+olspan=3D"2" style=3D"width:640px;"> <div style=3D"font-style: normal; font=
+-variant: normal; font-weight: normal; font-size: 18px; line-height: normal=
+; font-family: Arial, sans-serif; color: rgb(204, 102, 0); margin: 15px 20p=
+x 0px;">Hello Fanny Chung,</div> <div style=3D"margin:4px 20px 18px 20px;wi=
+dth:640px;"> Thank you for shopping with us. We thought you'd like to know =
+that we shipped your item, and that this completes your order. Your order i=
+s on its way, and can no longer be changed. If you need to return an item f=
+rom this shipment or manage other orders, please visit <a rel=3D"nofollow" =
+target=3D"_blank" href=3D"https://www.amazon.com/gp/css/history/orders/view=
+.html/ref=3Dpe_175190_21431760_M3T1_SC_oh_bd" style=3D"color:#006699;">Your=
+ Orders</a> on Amazon.com. </div> </td> =0A    </tr> =0A    <tr> =0A     <t=
+d colspan=3D"2" style=3D"padding:0 20px;width:640px;"> =0A      <table cell=
+spacing=3D"0" style=3D"border-top:3px solid #2d3741;width:640px;" cellpaddi=
+ng=3D"0"> =0A       <tbody> =0A        <tr> =0A         <td valign=3D"top" =
+style=3D"font-style: normal; font-variant: normal; font-weight: normal; fon=
+t-size: 14px; line-height: normal; font-family: Arial, san-serif; padding: =
+11px 0px 14px 18px; width: 280px; background-color: rgb(239, 239, 239);"> <=
+span style=3D"color:#666;">Your estimated delivery date is:</span> <br> <di=
+v style=3D"margin:2px 0 9px 0;"> <b>Monday, November 5, 2012</b> </div> <a =
+rel=3D"nofollow" target=3D"_blank" href=3D"https://www.amazon.com/gp/css/sh=
+iptrack/view.html/ref=3Dpe_175190_21431760_M3T1_SC_typ?ie=3DUTF8&amp;addres=
+sID=3Djhrnqxpsmp&amp;trackingNumber=3D1Z21F31F0301220871&amp;latestArrivalD=
+ate=3D1352174400&amp;shipMethod=3DUPS_GR_RES_DIRECT&amp;orderID=3D002-80924=
+75-6889803&amp;shipmentDate=3D1351836739"> <img alt=3D"Track your package" =
+border=3D"0" height=3D"26" id=3D"yiv1635934963trackYourPackage" src=3D"http=
+s://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/te/button-track=
+.png" style=3D"font-size:13px;" width=3D"149"> </a> <br> </td> =0A         =
+<td valign=3D"top" style=3D"font-style: normal; font-variant: normal; font-=
+weight: normal; font-size: 14px; line-height: normal; font-family: Arial, s=
+an-serif; padding: 11px 18px 14px; width: 280px; background-color: rgb(239,=
+ 239, 239);"><span style=3D"color:#666;">Your order was sent to:</span><br>=
+ <div style=3D"margin:2px 0;"> <b> Fanny Davidson <br> 247 W 87TH ST APT 17=
+F <br> =0A            =0A             NEW YORK, NY 10024-2850=0A           =
+  <br> United States </b> </div> </td> =0A        </tr> =0A        <tr> =0A=
+         <td colspan=3D"2" style=3D"font-size:10px;color:#666;padding:0 10p=
+x 20px 10px;line-height:16px;width:640px;"> <div style=3D"margin: 10px 0px =
+0px; font-style: normal; font-variant: normal; font-weight: normal; font-si=
+ze: 11px; line-height: 16px; font-family: Arial, sans-serif; color: rgb(51,=
+ 51, 51);"> Your package is being shipped by UPS and the tracking number is=
+ 1Z21F31F0301220871. Depending on the ship speed you chose, it may take 24 =
+hours for your tracking number to return any information. </div> </td> =0A =
+       </tr> =0A       </tbody> =0A      </table> </td> =0A    </tr> =0A   =
+ <tr> =0A     <td colspan=3D"2" style=3D"width:640px;"> <div style=3D"font-=
+style: normal; font-variant: normal; font-weight: normal; font-size: 18px; =
+line-height: normal; font-family: Arial, sans-serif; color: rgb(204, 102, 0=
+); border-bottom-width: 1px; border-bottom-style: solid; border-bottom-colo=
+r: rgb(204, 204, 204); margin: 0px 20px 3px; padding: 0px 0px 3px;"> Shipme=
+nt Details </div> </td> =0A    </tr> =0A    <tr> =0A     <td colspan=3D"2" =
+style=3D"padding:16px 40px;width:640px;"> =0A      <table width=3D"560" cel=
+lspacing=3D"0" cellpadding=3D"0"> =0A       <tbody> =0A        <tr> =0A    =
+     <td align=3D"center" valign=3D"top" style=3D"width:150px;height:115px;=
+"> <a rel=3D"nofollow" target=3D"_blank" href=3D"http://www.amazon.com/dp/B=
+000U69B0Y/ref=3Dpe_175190_21431760_M3T1_SC_dp_i1" style=3D"margin:0 20px 0 =
+0;" title=3D"ItemImage"> <img border=3D"0" id=3D"yiv1635934963asin" src=3D"=
+http://ecx.images-amazon.com/images/I/31lTFy0mFEL._SY115_.jpg" style=3D"mar=
+gin:0 0 14px 0;"> </a> </td> =0A         <td valign=3D"top" style=3D"color:=
+#666;padding:10px 10px 0 10px;width:330px;height:115px;"> <div style=3D"mar=
+gin:0 0 0 7px;padding:0;"> <a rel=3D"nofollow" target=3D"_blank" href=3D"ht=
+tp://www.amazon.com/dp/B000U69B0Y/ref=3Dpe_175190_21431760_M3T1_SC_dp_1" st=
+yle=3D"font-style: normal; font-variant: normal; font-weight: normal; font-=
+size: 14px; line-height: normal; font-family: Arial, sans-serif; text-decor=
+ation: none; color: rgb(0, 102, 153);"> Orka 12-Inch Stainless and Silicone=
+ Tongs </a> <br> <span style=3D"font-style: normal; font-variant: normal; f=
+ont-weight: normal; font-size: 12px; line-height: normal; font-family: Aria=
+l, sans-serif;"> Sold by Amazon.com LLC (Amazon.com) </span> </div> </td> =
+=0A         <td align=3D"right" valign=3D"top" style=3D"font-style: normal;=
+ font-variant: normal; font-weight: normal; font-size: 14px; line-height: n=
+ormal; font-family: Arial, san-serif; padding: 10px 0px 0px; width: 80px; h=
+eight: 115px;"> <b>$9.00</b> </td> =0A        </tr> =0A        <tr> =0A    =
+     <td colspan=3D"3" style=3D"border-top:1px solid rgb(234, 234, 234);pad=
+ding:0pt 0pt 16px;width:560px;"> &nbsp; </td> =0A        </tr> =0A        <=
+tr> =0A         <td colspan=3D"2" align=3D"right" valign=3D"top" style=3D"f=
+ont-style: normal; font-variant: normal; font-weight: normal; font-size: 12=
+px; line-height: 18px; font-family: Arial, sans-serif; padding: 0px 10px 0p=
+x 0px; color: rgb(51, 51, 51); width: 480px;" class=3D"yiv1635934963chargeD=
+escription"> Item Subtotal: </td> =0A         <td align=3D"right" valign=3D=
+"top" style=3D"font-style: normal; font-variant: normal; font-weight: norma=
+l; font-size: 12px; line-height: 18px; font-family: Arial, sans-serif; colo=
+r: rgb(51, 51, 51); width: 80px;" class=3D"yiv1635934963chargeAmount"> $9.0=
+0 </td> =0A        </tr> =0A        <tr> =0A         <td colspan=3D"2" alig=
+n=3D"right" valign=3D"top" style=3D"font-style: normal; font-variant: norma=
+l; font-weight: normal; font-size: 12px; line-height: 18px; font-family: Ar=
+ial, sans-serif; padding: 0px 10px 0px 0px; color: rgb(51, 51, 51); width: =
+480px;" class=3D"yiv1635934963chargeDescription"> Shipping &amp; Handling: =
+</td> =0A         <td align=3D"right" valign=3D"top" style=3D"font-style: n=
+ormal; font-variant: normal; font-weight: normal; font-size: 12px; line-hei=
+ght: 18px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); width: 8=
+0px;" class=3D"yiv1635934963chargeAmount"> $0.00 </td> =0A        </tr> =0A=
+        <tr> =0A         <td colspan=3D"2" align=3D"right" valign=3D"top" s=
+tyle=3D"font-style: normal; font-variant: normal; font-weight: normal; font=
+-size: 12px; line-height: 18px; font-family: Arial, sans-serif; padding: 0p=
+x 10px 0px 0px; color: rgb(51, 51, 51); width: 480px;" class=3D"yiv16359349=
+63chargeDescription"> Total Before Tax: </td> =0A         <td align=3D"righ=
+t" valign=3D"top" style=3D"font-style: normal; font-variant: normal; font-w=
+eight: normal; font-size: 12px; line-height: 18px; font-family: Arial, sans=
+-serif; color: rgb(51, 51, 51); width: 80px;" class=3D"yiv1635934963chargeA=
+mount"> $9.00 </td> =0A        </tr> =0A        <tr> =0A         <td colspa=
+n=3D"2" align=3D"right" valign=3D"top" style=3D"font-style: normal; font-va=
+riant: normal; font-weight: normal; font-size: 12px; line-height: 18px; fon=
+t-family: Arial, sans-serif; padding: 0px 10px 0px 0px; color: rgb(51, 51, =
+51); width: 480px;" class=3D"yiv1635934963chargeDescription"> Sales Tax Col=
+lected: </td> =0A         <td align=3D"right" valign=3D"top" style=3D"font-=
+style: normal; font-variant: normal; font-weight: normal; font-size: 12px; =
+line-height: 18px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); =
+width: 80px;" class=3D"yiv1635934963chargeAmount"> $0.80 </td> =0A        <=
+/tr> =0A        <tr> =0A         <td colspan=3D"2" align=3D"right" valign=
+=3D"top" style=3D"font-style: normal; font-variant: normal; font-weight: no=
+rmal; font-size: 14px; line-height: normal; font-family: Arial, sans-serif;=
+ padding: 10px 10px 10px 0px; color: rgb(51, 51, 51); width: 480px;"> Shipm=
+ent Total: </td> =0A         <td align=3D"right" valign=3D"top" style=3D"fo=
+nt-style: normal; font-variant: normal; font-weight: normal; font-size: 14p=
+x; line-height: normal; font-family: Arial, sans-serif; padding: 10px 0px 5=
+px; color: rgb(51, 51, 51); width: 80px;"> <b> $9.80 </b> </td> =0A        =
+</tr> =0A        <tr> =0A         <td colspan=3D"2" align=3D"right" valign=
+=3D"top" style=3D"font-style: normal; font-variant: normal; font-weight: no=
+rmal; font-size: 12px; line-height: 18px; font-family: Arial, sans-serif; p=
+adding: 0px 10px 0px 0px; color: rgb(51, 51, 51); width: 480px;" class=3D"y=
+iv1635934963chargeDescription"> Paid by Visa: </td> =0A         <td align=
+=3D"right" valign=3D"top" style=3D"font-style: normal; font-variant: normal=
+; font-weight: normal; font-size: 12px; line-height: 18px; font-family: Ari=
+al, sans-serif; color: rgb(51, 51, 51); width: 80px;" class=3D"yiv163593496=
+3chargeAmount"> $9.80 </td> =0A        </tr> =0A       </tbody> =0A      </=
+table> </td> =0A    </tr> =0A    <tr> =0A     <td colspan=3D"2" style=3D"pa=
+dding:0 20px;line-height:22px;width:640px;"> <div style=3D"border-top:1px s=
+olid #ccc;padding:20px 0 0 0;"> Returns are easy. Visit our <a rel=3D"nofol=
+low" target=3D"_blank" href=3D"http://www.amazon.com/gp/css/returns/homepag=
+e.html/ref=3Dpe_175190_21431760_M3T1_SC_r" style=3D"color:#006699;">Online =
+Return Center</a>. <br> If you need further assistance with your order, ple=
+ase visit <a rel=3D"nofollow" target=3D"_blank" href=3D"http://www.amazon.c=
+om/gp/help/customer/display.html/ref=3Dpe_175190_21431760_M3T1_SC_cs?ie=3DU=
+TF8%26nodeId=3D518316" style=3D"color:#006699;">Customer Service</a>. </div=
+> </td> =0A    </tr> =0A    <tr> =0A     <td colspan=3D"2" style=3D"padding=
+:0 20px 0 20px;line-height:22px;width:640px;"> <div style=3D"margin:10px 0;=
+padding:0 0 20px 0;border-bottom:1px solid #eaeaea;">We hope to see you aga=
+in soon!<br> <span style=3D"font-style: normal; font-variant: normal; font-=
+weight: normal; font-size: 14px; line-height: normal; font-family: Arial, s=
+an-serif;"> <b>Amazon.com</b> </span> </div> </td> =0A    </tr> =0A    <tr>=
+ =0A     <td colspan=3D"2" style=3D"padding:10px 20px 10px 20px;"> =0A     =
+ <table cellspacing=3D"0" style=3D"width:100%;border-bottom:1px solid #eaea=
+ea;padding:0 0 20px 0;" cellpadding=3D"0"> =0A       <tbody> =0A        <tr=
+> =0A         <td> =0A          <div style=3D"display:none;"></div>=0A     =
+     <table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0"=
+>=0A           <tbody>=0A            <tr>=0A             <td align=3D"cente=
+r"><map name=3D"mappedhtlpromo"><area shape=3D"rect" coords=3D"0,0,300,75" =
+alt=3D"Embrace reading" target=3D"_blank" href=3D"http://www.amazon.com:80/=
+gp/redirect.html/ref=3Dpe_175190_21431760_M3T1_LM_HTL/181-5795513-2170006?l=
+ocation=3Dhttp://www.amazon.com/gp/holidaytoylist&amp;token=3D3A0F170E7CEFE=
+27BDC730D3D7344512BC1296B83&amp;pf_rd_m=3DATVPDKIKX0DER&amp;pf_rd_s=3Demail=
+-center-1&amp;pf_rd_r=3D16B405944K97G2CDQJW5&amp;pf_rd_t=3D401&amp;pf_rd_p=
+=3D1408025882&amp;pf_rd_i=3Dcontentsymphonyslot"> </map><img src=3D"https:/=
+/images-na.ssl-images-amazon.com/images/G/01/email/transactional/toy-holida=
+y_01_htl_300x75_V386581813._V401972233_.png" width=3D"300" align=3D"center"=
+ usemap=3D"#mappedhtlpromo" alt=3D"HTL" height=3D"75" border=3D"0"></td>=0A=
+            </tr>=0A           </tbody>=0A          </table> </td> =0A     =
+    <td> =0A          <div style=3D"display:none;"></div>=0A          <tabl=
+e border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=0A      =
+     <tbody>=0A            <tr>=0A             <td align=3D"center"><map na=
+me=3D"mappedblackfridaypromo"><area shape=3D"rect" coords=3D"0,0,300,75" al=
+t=3D"Embrace reading" target=3D"_blank" href=3D"http://www.amazon.com:80/gp=
+/redirect.html/ref=3Dpe_175190_21431760_M3T1_RM_BLACK/189-9371009-1919944?_=
+encoding=3DUTF8&amp;location=3Dhttp%3A%2F%2Fwww.amazon.com%2Fb%3Fnode%3D384=
+082011&amp;token=3D3A0F170E7CEFE27BDC730D3D7344512BC1296B83&amp;pf_rd_m=3DA=
+TVPDKIKX0DER&amp;pf_rd_s=3Demail-center-1&amp;pf_rd_r=3D1JVAGPDHFTKBDEW61V2=
+2&amp;pf_rd_t=3D401&amp;pf_rd_p=3D1408025862&amp;pf_rd_i=3Dcontentsymphonys=
+lot"> </map><img src=3D"https://images-na.ssl-images-amazon.com/images/G/01=
+/email/transactional/black-friday-email-300x75-2._V401969841_.png" width=3D=
+"300" align=3D"center" usemap=3D"#mappedblackfridaypromo" alt=3D"BlackFrida=
+y" height=3D"75" border=3D"0"></td>=0A            </tr>=0A           </tbod=
+y>=0A          </table> </td> =0A        </tr> =0A       </tbody> =0A      =
+</table></td> =0A    </tr> =0A    <tr> =0A     <td colspan=3D"2" style=3D"f=
+ont-size:10px;color:#666;padding:0 20px 20px 20px;line-height:16px;width:64=
+0px;"> <div>This email was sent from a notification-only address that canno=
+t accept incoming email. Please do not reply to this message.</div> </td> =
+=0A    </tr> =0A   </tbody> =0A  </table>  =0A </div>=0A=0A</div><br><br> <=
+/div> </div>  </div></body></html>
+---61840014-70627555-1364237388=:70556--

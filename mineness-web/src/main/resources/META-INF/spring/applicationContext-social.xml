@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+       http://www.springframework.org/schema/task
+       http://www.springframework.org/schema/task/spring-task-3.1.xsd
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+    <bean id="connectionFactoryLocator" class="org.springframework.social.connect.support.ConnectionFactoryRegistry">
+        <property name="connectionFactories">
+            <list>
+                <bean class="org.springframework.social.facebook.connect.FacebookConnectionFactory">
+                    <constructor-arg index="0" value="${facebook.id}"/>
+                    <constructor-arg index="1" value="${facebook.secret}"/>
+                </bean>
+                <!--
+                <bean class="org.springframework.social.twitter.connect.TwitterConnectionFactory">
+                    <constructor-arg index="0" value="${twitter.consumerKey}"/>
+                    <constructor-arg index="1" value="${twitter.consumerSecret}"/>
+                </bean>
+                -->
+            </list>
+        </property>
+    </bean>
+
+    <bean id="connectionRepository" factory-method="createConnectionRepository"
+          factory-bean="usersConnectionRepository" scope="request">
+        <constructor-arg value="#{request.userPrincipal.principal.user.idString}"/>
+        <aop:scoped-proxy proxy-target-class="false"/>
+    </bean>
+
+    <!-- Pool size must be at least 2 for job chains to work -->
+    <task:executor id="facebookTaskExecutor" pool-size="25"/>
+
+</beans>

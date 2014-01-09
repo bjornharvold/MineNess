@@ -1,0 +1,362 @@
+Delivered-To: bjorn@harvold.com
+Received: by 10.194.6.35 with SMTP id x3csp62702wjx;
+        Mon, 25 Mar 2013 11:47:12 -0700 (PDT)
+X-Received: by 10.50.135.74 with SMTP id pq10mr11622524igb.46.1364237231963;
+        Mon, 25 Mar 2013 11:47:11 -0700 (PDT)
+Return-Path: <chiafenchung@yahoo.com>
+Received: from nm13-vm0.bullet.mail.ne1.yahoo.com (nm13-vm0.bullet.mail.ne1.yahoo.com. [98.138.91.48])
+        by mx.google.com with ESMTPS id nz1si29144548igc.26.2013.03.25.11.47.11
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Mon, 25 Mar 2013 11:47:11 -0700 (PDT)
+Received-SPF: pass (google.com: best guess record for domain of chiafenchung@yahoo.com designates 98.138.91.48 as permitted sender) client-ip=98.138.91.48;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: best guess record for domain of chiafenchung@yahoo.com designates 98.138.91.48 as permitted sender) smtp.mail=chiafenchung@yahoo.com;
+       dkim=pass header.i=@yahoo.com
+Received: from [98.138.226.178] by nm13.bullet.mail.ne1.yahoo.com with NNFMP; 25 Mar 2013 18:47:10 -0000
+Received: from [98.138.89.198] by tm13.bullet.mail.ne1.yahoo.com with NNFMP; 25 Mar 2013 18:47:10 -0000
+Received: from [127.0.0.1] by omp1056.mail.ne1.yahoo.com with NNFMP; 25 Mar 2013 18:47:10 -0000
+X-Yahoo-Newman-Property: ymail-3
+X-Yahoo-Newman-Id: 884025.64494.bm@omp1056.mail.ne1.yahoo.com
+Received: (qmail 49136 invoked by uid 60001); 25 Mar 2013 18:47:10 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s1024; t=1364237230; bh=C2Tlzp926sBvu92KAacxd8DDo9zBK7eoq2ddg2TB0dw=; h=X-YMail-OSG:Received:X-Rocket-MIMEInfo:X-Mailer:References:Message-ID:Date:From:Reply-To:Subject:To:In-Reply-To:MIME-Version:Content-Type; b=z2h8244RJnR9coAA1P1Fc6QRwYz9ahajJbbpwgLMVscKx20Sb3eN78Z1WgxJf31RJf0Grtsm5vgp2Dc1IfZbvKF7/Yae9ds0qG1kbMwvcwm3X8d3BjjcyzBZEKuxy6FOyYFSYlCUWmCJAgFzieIMP4YLbClZPIF0HcfavCeTdQU=
+DomainKey-Signature:a=rsa-sha1; q=dns; c=nofws;
+  s=s1024; d=yahoo.com;
+  h=X-YMail-OSG:Received:X-Rocket-MIMEInfo:X-Mailer:References:Message-ID:Date:From:Reply-To:Subject:To:In-Reply-To:MIME-Version:Content-Type;
+  b=1wJ4q+3Hp8cNpSel2zNa4QwNtNt1cEHUOV6wwShSZUdEZhtLvGeB2OzO63+mCVlHgy4mF3zSBiLaB1vpzNvG74biepsUIXVEx/cPNL4Hax7wWLCePCl165dgTV5CkJbKYrtdsrMTOef+z5dyLqRzMow4lmvirsYvCnq2A8lIH4c=;
+X-YMail-OSG: 5HWW188VM1nxcICU7GQ0eSkWjOrf45MqKLHXYTcFetiQxzo
+ LXrRhYoy_v.U5vdw4bRoN_YwNpFtcHazAsl5ijdomCrwobAvZlfS6pvi9AJ_
+ 5C63sDmccOwB7UonY252vtLOCvHk9pUSjIBc82fYP8tq2PAQwCmbl2CChu5u
+ .nLTXpj63faBlNWvrzWlshbfKoaWhjcYoUfmOTnT8DzkTz6CAmEHOad6wyNl
+ gYIG2HRVVa_QBHIDoMYDI_rtB_C6ekiQ6cAsS_HXPx4eY47hMNB5R3GOL7Xo
+ Ds8bb6sohdvwI48PrY4p3zUdT9s.yEUpZ7lCtyDOX0v9E.n5G87IuSxLPKju
+ hjRWQnygi4_zbi3m0j4gTfQw6xHIrnJXQBCpXYmD13jKBoNocVR03Mkp5LVY
+ Ab3JZPkNwpyMhpNvErjHFAPjC9ksytlwF__EQDeTDQXKit6NDERnRAjgciOf
+ Fxcc3oFoNSBJwP1T5puJA6VbfwJAVqHnCnYNyn2T3L2M3PF46q33bZ_ufdnY
+ W8TK4LCB6SfezQyxJrPIzQ0SVDZ8iLM7wHIi7qcqEbSXeI2AuXGaT3NVatDx
+ fKVSBzGprODOGSWkR1vi_gUVKUaZ6XJDFiUMOw5Z4cXIeG1UTwKC.1XiYLvX
+ vZBSaRdwKf6ojoaa0o3qLfa7YaLZx1dANekMqkuRw4ZLHyKCfuqUN1qbxaiB
+ ImSqPR04vzRbiU.b2BLznFLz7cOzp1h8GCeDTUn918KOT8dcYfnGFSxexfQ-
+ -
+Received: from [207.237.255.82] by web124905.mail.ne1.yahoo.com via HTTP; Mon, 25 Mar 2013 11:47:10 PDT
+X-Rocket-MIMEInfo: 002.001,CgoKLS0tLS0gRm9yd2FyZGVkIE1lc3NhZ2UgLS0tLS0KRnJvbTogImF1dG8tY29uZmlybUBhbWF6b24uY29tIiA8YXV0by1jb25maXJtQGFtYXpvbi5jb20.ClRvOiAiY2hpYWZlbmNodW5nQHlhaG9vLmNvbSIgPGNoaWFmZW5jaHVuZ0B5YWhvby5jb20.IApTZW50OiBXZWRuZXNkYXksIEZlYnJ1YXJ5IDYsIDIwMTMgMTA6MDUgUE0KU3ViamVjdDogWW91ciBPcmRlciB3aXRoIEFtYXpvbi5jb20KIAoKWW91ciBPcmRlciB3aXRoIEFtYXpvbi5jb20gCiAgwqBWSUVXIENBUlQgfCBXSVNIIExJU1QgfCBZT1VSIEEBMAEBAQE-
+X-Mailer: YahooMailWebService/0.8.139.530
+References: <0000013cb29db325-a0131bc1-f8af-44de-91b0-fada0641cbcd-000000@email.amazonses.com>
+Message-ID: <1364237230.40761.YahooMailNeo@web124905.mail.ne1.yahoo.com>
+Date: Mon, 25 Mar 2013 11:47:10 -0700 (PDT)
+From: Fanny Chung <chiafenchung@yahoo.com>
+Reply-To: Fanny Chung <chiafenchung@yahoo.com>
+Subject: Fw: Your Order with Amazon.com
+To: "bjorn@harvold.com" <bjorn@harvold.com>
+In-Reply-To: <0000013cb29db325-a0131bc1-f8af-44de-91b0-fada0641cbcd-000000@email.amazonses.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="-1514212066-602604309-1364237230=:40761"
+
+
+---1514212066-602604309-1364237230=:40761
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=iso-8859-1
+
+=0A=0A=0A----- Forwarded Message -----=0AFrom: "auto-confirm@amazon.com" <a=
+uto-confirm@amazon.com>=0ATo: "chiafenchung@yahoo.com" <chiafenchung@yahoo.=
+com> =0ASent: Wednesday, February 6, 2013 10:05 PM=0ASubject: Your Order wi=
+th Amazon.com=0A =0A=0AYour Order with Amazon.com =0A  =A0VIEW CART | WISH =
+LIST | YOUR ACCOUNT | HELP  =0AThanks for your order, Fanny Chung!=0AWant t=
+o manage your order online?=0AIf you need to check the status of your order=
+ or make changes, please visit our home page at Amazon.com and click on You=
+r Account at the top of any page.=0A =0APurchasing Information:  =0AEmail A=
+ddress:=A0=A0chiafenchung@yahoo.com   =0ABilling address=0AFanny Davidson=
+=0A247 W 87TH ST APT 17F=0ANEW YORK, NY 10024-2850=0AUnited States=0A=0A  S=
+hipping Address:=0AFanny Davidson=0A247 W 87TH ST APT 17F=0ANEW YORK, NY 10=
+024-2850=0AUnited States=0A=0A   =0AOrder grand total: $141.90   =0AGet the=
+ Amazon.com Rewards Visa Card and get $30 instantly as an Amazon.com Gift C=
+ard.   =0AOrder Summary:  =0AShipping Details : (orders will arrive in 2 sh=
+ipments)   =0AOrder #:   103-0992490-1477865   =0AShipping Method:   Two-Da=
+y Shipping   =0AItems: =A0    $131.39    =0AShipping & handling: =A0    $0.=
+00    =0A=A0  ------  =0ATotal before tax: =A0    $131.39    =0AEstimated t=
+ax to be collected: =A0    $10.51    =0A=A0  ------  =0AOrder total: =A0   =
+  $141.90     =0A=0A=A0=0ADelivery estimate: Feb. 8, 2013  =0A 1 "LEGO Chim=
+a Laval Royal Fighter 70005"=0ALEGO;=0A     Toy; $34.97=0AIn Stock=0A=A0=A0=
+=0A=0A  Sold by: Amazon.com LLC   =0A 1 "LEGO Chima Cragger Command Ship 70=
+006"=0ALEGO;=0A     Toy; $72.25=0AIn Stock=0A=A0=A0=0A=0A  Sold by: Amazon.=
+com LLC   =0A 1 "LEGO Ninjago Kais Fire Mech 70500"=0ALEGO;=0A     Toy; $11=
+.22=0AIn Stock=0A=A0=A0=0A=0A  Sold by: Amazon.com LLC    =0A=0A=A0=0ADeliv=
+ery estimate: Feb. 9, 2013  =0A 1 "Chinese Knotting Beading Cord Fine Red 0=
+.8mm 80 Yards for Crafts and Knotted Jewelry Like Shamballa Bracelets"=0AOf=
+fice Product; $12.95=0AIn Stock=0A=A0=A0=0A=0A  Sold by: Rockin Beads     =
+=0A=0A________________________________=0A  =0A=A0  =0ANeed to print an invo=
+ice? =0A Visit www.amazon.com/your-account and click to view your orders. C=
+lick "View order" next to the appropriate order. You'll find a button to pr=
+int an invoice on the next page =0A =0AWhere can I get help with reviewing =
+or changing my orders? =0ATo learn more about managing your orders on Amazo=
+n.com, please visit our Help pages at www.amazon.com/help/orders/. =0A =0AP=
+lease note: This email message was sent from a notification-only address th=
+at cannot accept incoming email. Please do not reply to this message.  =0AI=
+f you ever need to return an order, visit our Online Returns Center: www.am=
+azon.com/returns  =0AThanks again for shopping with us.  =0AAmazon.com =0AE=
+arth's Biggest Selection   =0A=A0 Prefer not to receive HTML mail? Click he=
+re     
+---1514212066-602604309-1364237230=:40761
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=iso-8859-1
+
+<html><body><div style=3D"color:#000; background-color:#fff; font-family:ti=
+mes new roman, new york, times, serif;font-size:12pt"><div><span></span></d=
+iv><div><br></div>  <div style=3D"font-family: 'times new roman', 'new york=
+', times, serif; font-size: 12pt;"> <div style=3D"font-family: 'times new r=
+oman', 'new york', times, serif; font-size: 12pt;"> <div dir=3D"ltr"> <font=
+ size=3D"2" face=3D"Arial"> ----- Forwarded Message -----<br>  <b><span sty=
+le=3D"font-weight:bold;">From:</span></b> "auto-confirm@amazon.com" &lt;aut=
+o-confirm@amazon.com&gt;<br> <b><span style=3D"font-weight: bold;">To:</spa=
+n></b> "chiafenchung@yahoo.com" &lt;chiafenchung@yahoo.com&gt; <br> <b><spa=
+n style=3D"font-weight: bold;">Sent:</span></b> Wednesday, February 6, 2013=
+ 10:05 PM<br> <b><span style=3D"font-weight: bold;">Subject:</span></b> You=
+r Order with Amazon.com<br> </font> </div> <br>=0A<div id=3D"yiv180397216">=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A    <title>Your Order with =
+Amazon.com</title>=0A=0A<div>=0A  =0A=0A=0A<table border=3D"0" width=3D"100=
+%" cellspacing=3D"0" cellpadding=3D"0">=0A  <tbody><tr bgcolor=3D"#FFFFFF">=
+=0A    <td align=3D"left">=0A      =0A=0A=0A=0A=0A=0A=0A=0A=0A=0A<a rel=3D"=
+nofollow" target=3D"_blank" href=3D"http://www.amazon.com/"><img src=3D"htt=
+ps://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/amazon-log=
+o._V192256676_.gif" width=3D"140" alt=3D"Amazon.com" height=3D"30" border=
+=3D"0"></a>=0A    </td>=0A    <td align=3D"right" class=3D"yiv180397216topn=
+av_header" style=3D"font-size:12px;text-decoration:none;color:black;"><b>=
+=0A      <a rel=3D"nofollow" target=3D"_blank" href=3D"http://www.amazon.co=
+m/gp/cart/view.html/ref=3Dcs_ae_cart"><img src=3D"https://images-na.ssl-ima=
+ges-amazon.com/images/G/01/x-locale/common/icons/topnav-cart._V192239683_.g=
+if" width=3D"19" alt=3D"VIEW CART" height=3D"16" border=3D"0">&nbsp;VIEW CA=
+RT</a>=0A    |=0A      <a rel=3D"nofollow" target=3D"_blank" href=3D"http:/=
+/www.amazon.com/gp/registry/wishlist/ref=3Dcs_ae_wl">WISH LIST</a>=0A    | =
+=0A      <a rel=3D"nofollow" target=3D"_blank" href=3D"http://www.amazon.co=
+m/gp/css/homepage.html/ref=3Dcs_ae_yr">YOUR ACCOUNT</a>=0A    |=0A      <a =
+rel=3D"nofollow" target=3D"_blank" href=3D"http://www.amazon.com/gp/help/cu=
+stomer/display.html/ref=3Dcs_nav_top_hlp">HELP</a>=0A    </b></td>=0A  </tr=
+>=0A</tbody></table>=0A=0A=0A=0A=0A=0A<table width=3D"90%" border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"1" align=3D"center" bgcolor=3D"#006699">=0A  =
+<tbody><tr>=0A    <td>=0A      <table width=3D"100%" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"5" align=3D"center">=0A        <tbody><tr valign=3D=
+"top">=0A          <td bgcolor=3D"#FFFFFF">=0A            <font face=3D"ver=
+dana,arial,helvetica" size=3D"-1">=0A              <div><b>Thanks for your =
+order, Fanny Chung!</b></div>=0A=0A              <div><b>Want to manage you=
+r order online?</b><br>=0A                =0A=0A=0A=0A=0AIf you need to che=
+ck the status of your order or make changes, please visit our home page at =
+Amazon.com and click on Your Account at the top of any page.<br>=0A        =
+      </div>=0A            </font>=0A            <table cellpadding=3D"4" c=
+ellspacing=3D"0" border=3D"0" width=3D"100%">=0A              <tbody><tr>=
+=0A=09        <td colspan=3D"2" bgcolor=3D"#006699">=0A=09          <font c=
+olor=3D"#ffffff" face=3D"verdana,arial,helvetica" size=3D"-1"><b>Purchasing=
+ Information:</b></font>=0A=09        </td>=0A              </tr>=0A       =
+       <tr>=0A=09        <td colspan=3D"2">=0A                  <font face=
+=3D"verdana,arial,helvetica" size=3D"-1">=0A                    <b>Email Ad=
+dress:</b>&nbsp;&nbsp;chiafenchung@yahoo.com=0A=09          </font>=0A=09  =
+      </td>=0A              </tr>=0A              <tr>=0A=09        <td col=
+span=3D"2">=0A=09          <table width=3D"100%" cellspacing=3D"0" cellpadd=
+ing=3D"0">=0A=09            <tbody><tr>=0A=09              <td valign=3D"to=
+p" width=3D"50%" style=3D"padding-right:1em;">=0A=0A                       =
+ <font face=3D"verdana,arial,helvetica" size=3D"-1">=0A=09=09          <b>B=
+illing address</b><br>=0A                            Fanny Davidson<br>247 =
+W 87TH ST APT 17F<br>NEW YORK, NY 10024-2850<br>United States<br><br>=0A=09=
+=09        </font>=0A=09              </td>=0A                    <td valig=
+n=3D"top" width=3D"50%"> =0A                        <font face=3D"verdana,a=
+rial,helvetica" size=3D"-1">=0A                        <b>Shipping Address:=
+</b><br>=0A                        Fanny Davidson<br>247 W 87TH ST APT 17F<=
+br>NEW YORK, NY 10024-2850<br>United States<br><br>=0A=09=09        </font>=
+=0A=09              </td>=0A=09            </tr>=0A=09          </tbody></t=
+able>=0A=09        </td>=0A              </tr>=0A              <tr>=0A=09  =
+      <td colspan=3D"2">=0A                  <font face=3D"verdana,arial,he=
+lvetica" size=3D"-1">=0A=09            <b>Order grand total: $141.90</b>=0A=
+=09          </font>=0A=09        </td>=0A              </tr>=0A=0A        =
+      <tr>=0A=09        <td colspan=3D"2">=0A                  <font face=
+=3D"verdana,arial,helvetica" size=3D"-1">=0A                    Get the <b>=
+<a rel=3D"nofollow" target=3D"_blank" href=3D"http://www.amazon.com/Instant=
+Rewards?_encoding=3DUTF8&amp;ref_=3Dpe_120430_17456570">Amazon.com Rewards =
+Visa Card</a></b> and get <b>$30 instantly</b> as an Amazon.com Gift Card.=
+=0A=09          </font>=0A=09        </td>=0A=09      </tr>=0A=0A=0A=0A=0A =
+                   <tr>=0A                        <td colspan=3D"2" bgcolor=
+=3D"#006699">=0A                        <font color=3D"#ffffff" face=3D"ver=
+dana,arial,helvetica" size=3D"-1"><b>Order Summary:</b></font>=0A          =
+              </td>=0A                    </tr>=0A=0A=0A=0A=0A             =
+      <tr>=0A                        <td bgcolor=3D"#EEEEEE">=0A=0A=0A     =
+                   <font face=3D"verdana,arial,helvetica" size=3D"-1" color=
+=3D"#CC6600"><b>=0A=0A                      Shipping Details=0A            =
+          : (orders will arrive in 2 shipments)=0A=0A                      =
+  </b></font>=0A=0A                        </td>=0A                    </tr=
+>=0A                    <tr>=0A                        <td>=0A             =
+           <table border=3D"0" cellpadding=3D"1" cellspacing=3D"0" width=3D=
+"100%">=0A=0A=0A=0A                            <tbody><tr>=0A              =
+                  <td nowrap=3D"">=0A                                <font =
+face=3D"verdana,arial,helvetica" size=3D"-1">=0A                           =
+     <b>Order #:</b>=0A                                </font>=0A          =
+                      </td>=0A                                <td width=3D"=
+98%">=0A                                <font face=3D"verdana,arial,helveti=
+ca" size=3D"-1">=0A                                <a rel=3D"nofollow" targ=
+et=3D"_blank" href=3D"https://www.amazon.com/gp/css/order-history/ref=3Dox_=
+oce_order_history">103-0992490-1477865</a>=0A                              =
+  </font>=0A                                </td>=0A                       =
+     </tr>=0A                            <tr>=0A                           =
+     <td nowrap=3D"">=0A                                <font face=3D"verda=
+na,arial,helvetica" size=3D"-1">=0A                                    <b>S=
+hipping Method:</b>=0A                                </font>=0A           =
+                     </td>=0A                                <td width=3D"9=
+8%">=0A                                <font face=3D"verdana,arial,helvetic=
+a" size=3D"-1">=0A                                  Two-Day Shipping=0A    =
+                            </font>=0A                                </td>=
+=0A                            </tr>=0A=0A                            =0A=
+=0A        <tr>=0A          <td nowrap=3D"">=0A            <span class=3D"y=
+iv180397216small"> =0A              <font face=3D"verdana,arial,helvetica" =
+size=3D"-1">=0A                Items: &nbsp;=0A              </font>=0A    =
+        </span>=0A          </td>=0A          <td>=0A            <span clas=
+s=3D"yiv180397216small">=0A              <font face=3D"verdana,arial,helvet=
+ica" size=3D"-1">=0A                $131.39 =0A              </font>=0A    =
+        </span>=0A          </td>=0A        </tr>=0A        <tr>=0A        =
+  <td nowrap=3D"">=0A            <span class=3D"yiv180397216small"> =0A    =
+          <font face=3D"verdana,arial,helvetica" size=3D"-1">=0A           =
+     Shipping &amp; handling: &nbsp;=0A              </font>=0A            =
+</span>=0A          </td>=0A          <td>=0A            <span class=3D"yiv=
+180397216small">=0A              <font face=3D"verdana,arial,helvetica" siz=
+e=3D"-1">=0A                $0.00 =0A              </font>=0A            </=
+span>=0A          </td>=0A        </tr>=0A        <tr>=0A          <td>=0A =
+           &nbsp;=0A          </td>=0A          <td>=0A            ------=
+=0A          </td>=0A        </tr>=0A        <tr>=0A          <td nowrap=3D=
+"">=0A            <span class=3D"yiv180397216small"> =0A              <font=
+ face=3D"verdana,arial,helvetica" size=3D"-1">=0A                Total befo=
+re tax: &nbsp;=0A              </font>=0A            </span>=0A          </=
+td>=0A          <td>=0A            <span class=3D"yiv180397216small">=0A   =
+           <font face=3D"verdana,arial,helvetica" size=3D"-1">=0A          =
+      $131.39 =0A              </font>=0A            </span>=0A          </=
+td>=0A        </tr>=0A        <tr>=0A          <td nowrap=3D"">=0A         =
+   <span class=3D"yiv180397216small"> =0A              <font face=3D"verdan=
+a,arial,helvetica" size=3D"-1">=0A                Estimated tax to be colle=
+cted: &nbsp;=0A              </font>=0A            </span>=0A          </td=
+>=0A          <td>=0A            <span class=3D"yiv180397216small">=0A     =
+         <font face=3D"verdana,arial,helvetica" size=3D"-1">=0A            =
+    $10.51 =0A              </font>=0A            </span>=0A          </td>=
+=0A        </tr>=0A        <tr>=0A          <td>=0A            &nbsp;=0A   =
+       </td>=0A          <td>=0A            ------=0A          </td>=0A    =
+    </tr>=0A        <tr>=0A          <td nowrap=3D"">=0A            <span c=
+lass=3D"yiv180397216small">=0A              <font face=3D"verdana,arial,hel=
+vetica" size=3D"-1">=0A                <b> =0A                  Order total=
+: &nbsp;=0A                </b>=0A              </font>=0A            </spa=
+n>=0A          </td>=0A          <td>=0A            <span class=3D"yiv18039=
+7216small">=0A              <font face=3D"verdana,arial,helvetica" size=3D"=
+-1">=0A                <b> =0A                  $141.90 =0A                =
+</b>=0A              </font>=0A            </span>=0A          </td>=0A    =
+    </tr>=0A=0A=0A=0A=0A=0A=0A                            <tr>=0A          =
+                      <td colspan=3D"2">=0A                                =
+<font face=3D"verdana,arial,helvetica" size=3D"-1">=0A                     =
+           <br>&nbsp;<br>=0A=0A=0A    =0A=0A=0A=0A=0A=0A=0A=0A=0A          =
+        <b>Delivery estimate: </b>Feb. 8, 2013=0A=0A=0A=0A=0A=0A=0A=0A=0A=
+=0A=0A=0A=0A=0A=0A                                </font>=0A               =
+                 <table>=0A=0A                                    <tbody><t=
+r valign=3D"top">=0A                                        <td>=0A        =
+                                </td>=0A                                   =
+     <td><font face=3D"verdana,arial,helvetica" size=3D"-1"><b>1</b></font>=
+</td>=0A=0A=0A<td>=0A<font face=3D"verdana,arial,helvetica" size=3D"-1">=0A=
+  <b>"LEGO Chima Laval Royal Fighter 70005"</b><br>=0A     LEGO;=0A     Toy=
+;=0A=0A=0A    <span class=3D"yiv180397216price">$34.97</span><br>=0A=0A=0A=
+=0A     In Stock<br>&nbsp;&nbsp;=0A=0A  Sold by: <a rel=3D"nofollow" target=
+=3D"_blank" href=3D"http://www.amazon.com/gp/help/seller/home.html/ref=3Dox=
+_oce_seller_home?ie=3DUTF8&amp;seller=3DATVPDKIKX0DER">Amazon.com LLC</a>=
+=0A=0A=0A=0A</font>=0A</td>=0A=0A=0A                                     </=
+tr>=0A=0A=0A                                    <tr valign=3D"top">=0A     =
+                                   <td>=0A                                 =
+       </td>=0A                                        <td><font face=3D"ve=
+rdana,arial,helvetica" size=3D"-1"><b>1</b></font></td>=0A=0A=0A<td>=0A<fon=
+t face=3D"verdana,arial,helvetica" size=3D"-1">=0A  <b>"LEGO Chima Cragger =
+Command Ship 70006"</b><br>=0A     LEGO;=0A     Toy;=0A=0A=0A    <span clas=
+s=3D"yiv180397216price">$72.25</span><br>=0A=0A=0A=0A     In Stock<br>&nbsp=
+;&nbsp;=0A=0A  Sold by: <a rel=3D"nofollow" target=3D"_blank" href=3D"http:=
+//www.amazon.com/gp/help/seller/home.html/ref=3Dox_oce_seller_home?ie=3DUTF=
+8&amp;seller=3DATVPDKIKX0DER">Amazon.com LLC</a>=0A=0A=0A=0A</font>=0A</td>=
+=0A=0A=0A                                     </tr>=0A=0A=0A               =
+                     <tr valign=3D"top">=0A                                =
+        <td>=0A                                        </td>=0A            =
+                            <td><font face=3D"verdana,arial,helvetica" size=
+=3D"-1"><b>1</b></font></td>=0A=0A=0A<td>=0A<font face=3D"verdana,arial,hel=
+vetica" size=3D"-1">=0A  <b>"LEGO Ninjago Kais Fire Mech 70500"</b><br>=0A =
+    LEGO;=0A     Toy;=0A=0A=0A    <span class=3D"yiv180397216price">$11.22<=
+/span><br>=0A=0A=0A=0A     In Stock<br>&nbsp;&nbsp;=0A=0A  Sold by: <a rel=
+=3D"nofollow" target=3D"_blank" href=3D"http://www.amazon.com/gp/help/selle=
+r/home.html/ref=3Dox_oce_seller_home?ie=3DUTF8&amp;seller=3DATVPDKIKX0DER">=
+Amazon.com LLC</a>=0A=0A=0A=0A</font>=0A</td>=0A=0A=0A                     =
+                </tr>=0A=0A=0A=0A                                </tbody></=
+table>=0A                                =0A=0A                            =
+</td></tr><tr>=0A                                <td colspan=3D"2">=0A     =
+                           <font face=3D"verdana,arial,helvetica" size=3D"-=
+1">=0A                                <br>&nbsp;<br>=0A=0A=0A    =0A=0A=0A=
+=0A=0A=0A=0A=0A=0A                  <b>Delivery estimate: </b>Feb. 9, 2013=
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A                              =
+  </font>=0A                                <table>=0A=0A                  =
+                  <tbody><tr valign=3D"top">=0A                            =
+            <td>=0A                                        </td>=0A        =
+                                <td><font face=3D"verdana,arial,helvetica" =
+size=3D"-1"><b>1</b></font></td>=0A=0A=0A<td>=0A<font face=3D"verdana,arial=
+,helvetica" size=3D"-1">=0A  <b>"Chinese Knotting Beading Cord Fine Red 0.8=
+mm 80 Yards for Crafts and Knotted Jewelry Like Shamballa Bracelets"</b><br=
+>=0A     Office Product;=0A=0A=0A    <span class=3D"yiv180397216price">$12.=
+95</span><br>=0A=0A=0A=0A     In Stock<br>&nbsp;&nbsp;=0A=0A  Sold by: <a r=
+el=3D"nofollow" target=3D"_blank" href=3D"http://www.amazon.com/gp/help/sel=
+ler/home.html/ref=3Dox_oce_seller_home?ie=3DUTF8&amp;seller=3DA2DP6GYPOTWT4=
+1">Rockin Beads</a>=0A=0A=0A=0A</font>=0A</td>=0A=0A=0A                    =
+                 </tr>=0A=0A=0A=0A                                </tbody><=
+/table>=0A                                =0A=0A=0A                        =
+        </td>=0A                            </tr>=0A                       =
+ </tbody></table>=0A=09</td>=0A      </tr>=0A=0A=0A=0A=09=09=09<tr>=0A=09=
+=09=09  <td>=0A=09  <hr noshade=3D"" size=3D"1">=0A=0A      <a rel=3D"nofol=
+low" target=3D"_blank" href=3D"https://www.amazon.com/gp/gc/ref=3Dgc_orderc=
+onfirm_email_hol"><img src=3D"https://images-na.ssl-images-amazon.com/image=
+s/G/01/gift-certificates/consumer/ordering-confirm-email-gc-banner-ad._V376=
+476671_.gif" width=3D"643" alt=3D"Amazon.com Gift Cards" height=3D"90" bord=
+er=3D"0"></a>=0A=0A=0A=0A=0A    <div>=0A    <font face=3D"verdana,arial,hel=
+vetica" size=3D"-1">=0A &nbsp;=0A    </font>=0A</div>=0A=0A=0A<div>=0A<font=
+ face=3D"verdana,arial,helvetica" size=3D"-1">=0A   <b>=0A      Need to pri=
+nt an invoice? <br>=0A   </b>=0A   =0A=0A=0A=0A=0AVisit <a target=3D"_blank=
+" href=3D"http://www.amazon.com/your-account">www.amazon.com/your-account</=
+a> and click to view your orders. Click "View order" next to the appropriat=
+e order. You'll find a button to print an invoice on the next page <br>=0A<=
+/font>=0A</div>=0A=0A=0A<div> <font face=3D"verdana,arial,helvetica" size=
+=3D"-1"><b>Where can I get help with reviewing or changing my orders?</b> <=
+br>=0A=0A=0A=0A=0A=0ATo learn more about managing your orders on Amazon.com=
+, please visit our Help pages at <a target=3D"_blank" href=3D"http://www.am=
+azon.com/help/orders/">www.amazon.com/help/orders/</a>. <br></font> </div>=
+=0A=0A    <div>=0A    <font face=3D"verdana,arial,helvetica" size=3D"-1">=
+=0A       Please note: This email message was sent from a notification-only=
+ address that cannot accept incoming email. Please do not reply to this mes=
+sage.=0A    </font>=0A    </div>=0A       <div>=0A       <font face=3D"verd=
+ana,arial,helvetica" size=3D"-1">=0A         =0A=0A=0A=0A=0AIf you ever nee=
+d to return an order, visit our Online Returns Center: <a target=3D"_blank"=
+ href=3D"http://www.amazon.com/returns">www.amazon.com/returns</a>=0A      =
+ </font>=0A       </div>=0A    <div>=0A    <font face=3D"verdana,arial,helv=
+etica" size=3D"-1">=0A       Thanks again for shopping with us.=0A    </fon=
+t>=0A     </div>=0A    <div>=0A    <font face=3D"verdana,arial,helvetica" s=
+ize=3D"-1">=0A      <b>=0A=09=0A=0A=0A=0A=0A<a rel=3D"nofollow" target=3D"_=
+blank" href=3D"http://www.amazon.com/ref=3Dox_oce_homepage">Amazon.com</a><=
+/b>=0A=0A      <br><b>=0A=09=0A=0A=0A=0A=0AEarth's Biggest Selection=0A    =
+  </b>=0A    </font>=0A    </div>=0A=0A=0A    <div>=0A    <font face=3D"ver=
+dana,arial,helvetica" size=3D"-1">=0A      <img src=3D"https://images-na.ss=
+l-images-amazon.com/images/G/01/x-locale/common/icons/icon-unsubscribe._V19=
+2239991_.gif" width=3D"17" height=3D"15" border=3D"0">&nbsp;=0A      Prefer=
+ not to receive HTML mail?=0A=0A=0A  <a rel=3D"nofollow" target=3D"_blank" =
+href=3D"https://www.amazon.com/gp/gss/ccp/ref=3Dox_oce_email_preference">Cl=
+ick here</a>=0A  </font>=0A      </div>=0A=09=09=09  </td>=0A=09=09=09</tr>=
+=0A=09=09      </tbody></table>=0A </td>=0A                   </tr>=0A     =
+           </tbody></table>=0A              </td>=0A             </tr>=0A  =
+       </tbody></table>=0A</div>=0A=0A</div><br><br> </div> </div>  </div><=
+/body></html>
+---1514212066-602604309-1364237230=:40761--

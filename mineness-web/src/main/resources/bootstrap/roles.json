@@ -1,0 +1,25 @@
+{
+    "list": [
+        {
+            "id":"5184b08a8de2e44d163529f0",
+            "nm":"Administrator",
+            "rlnm":"administrator",
+            "dscrptn":"System Administrator",
+            "rghts":["LOGIN_ADMIN","READ_ROLE","INSERT_ROLE","UPDATE_ROLE","DELETE_ROLE","READ_USER","INSERT_USER","UPDATE_USER","DELETE_USER"]
+        },
+        {
+            "id":"5184b08a8de2e44d163529f1",
+            "nm":"User",
+            "rlnm":"user",
+            "dscrptn":"Application user",
+            "rghts":["LOGIN_USER","READ_USER","INSERT_USER","UPDATE_USER"]
+        },
+        {
+            "id":"5184b08a8de2e44d163529f2",
+            "nm":"Developer",
+            "rlnm":"developer",
+            "dscrptn":"Developer",
+            "rghts":["DEVELOPER"]
+        }
+    ]
+}

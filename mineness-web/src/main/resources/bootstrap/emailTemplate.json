@@ -1,0 +1,72 @@
+{
+    "list": [
+        {
+            "id":"50c94898a0ee3e6df06dc5ed",
+            "lbl":"Amazon - Shipment confirmation",
+            "vrsn":"1",
+            "vndr":"AMAZON",
+            "lcl":"en_US",
+            "cntntTp":"HTML",
+            "mtch":["ship-confirm@amazon.com", "Shipping Confirmation"],
+            "srvc":"amazonHTMLShipmentConfirmationEmailParserService",
+            "rdrd": {
+                "xpth":"//a[starts-with(@href, 'https://www.amazon.com/gp/css/summary/edit.html/')]",
+                "nvgtn":"first_child|nodevalue"
+            },
+            "grps":[
+                {
+                    "prprts":[
+                        {
+                            "lbl":"Purchase Price",
+                            "ky":"purchasePrice",
+                            "xpth":"//a[starts-with(@href, 'http://www.amazon.com/dp/') and not(child::img)]",
+                            "nvgtn":"parent|parent|first_sibling|first_child|first_child|nodevalue",
+                            "rqrd":true
+                        },
+                        {
+                            "lbl":"ASIN",
+                            "ky":"asin",
+                            "xpth":"//a[starts-with(@href, 'http://www.amazon.com/dp/') and not(child::img)]",
+                            "nvgtn":"@href|nodevalue|substring('http://www.amazon.com/dp/', '/')",
+                            "rqrd":true
+                        }
+                    ]
+                }
+
+            ],
+            "prps":[]
+        },
+        {
+            "id":"50c94898a0ee3e6df06dc5ef",
+            "lbl":"Amazon - Order confirmation",
+            "vrsn":"1",
+            "vndr":"AMAZON",
+            "lcl":"en_US",
+            "cntntTp":"HTML",
+            "mtch":["auto-confirm@amazon.com", "Your order with Amazon.com"],
+            "srvc":"amazonHTMLOrderConfirmationEmailParserService",
+            "rdrd": {
+                "xpth":"//a[starts-with(@href, 'https://www.amazon.com/gp/css/order-history/')]",
+                "nvgtn":"first_child|nodevalue"
+            },
+            "grps":[],
+            "prps":[
+                    {
+                        "lbl":"Billing Address",
+                        "ky":"billingAddress",
+                        "xpth":"//b[(text() = 'Billing Address:')]",
+                        "nvgtn":"parent|all_siblings",
+                        "rqrd":true
+                    },
+                    {
+                        "lbl":"Shipping Address",
+                        "ky":"shippingAddress",
+                        "xpth":"//b[(text() = 'Shipping Address:')]",
+                        "nvgtn":"parent|all_siblings",
+                        "rqrd":true
+                    }
+            ]
+        }
+    ]
+}
+
